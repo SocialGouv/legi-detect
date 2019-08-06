@@ -15,7 +15,7 @@ const RE_ARTICLES =
   SINGLE_ARTICLE +
   ")\\s*(a|à|et)\\s+(" +
   SINGLE_ARTICLE +
-  ")\\b";
+  ")";
 
 const getWords = (str, count, startWordIndex = 0) =>
   str
@@ -43,11 +43,10 @@ const detectMultiples = (str, defaultCode) => {
           const parts = match.match(new RegExp(RE_ARTICLES, "i"));
           const articles = [
             `${parts[2] || ""}${parts[3]}`,
-            `${parts[8] || ""}${parts[9]}`
+            `${parts[7] || ""}${parts[8]}`
           ];
           const indexOfArticles = str.indexOf(match, startIndex);
-
-          const operator = parts[6];
+          const operator = parts[5];
 
           const codeSearchString = getSubPhraseFromIndex(
             str,
@@ -89,7 +88,7 @@ const detectMultiples = (str, defaultCode) => {
               },
               {
                 ...(secondArticle || {}),
-                source: `${parts[7]}`
+                source: `${parts[6]}`
               }
             ];
           }

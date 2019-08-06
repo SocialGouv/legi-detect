@@ -90,6 +90,7 @@ const LivePreview = () => {
     }
   }, [debouncedSearchTerm]);
 
+  console.log("text, html", text, html);
   return (
     <div className="row">
       <textarea
