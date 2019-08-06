@@ -10,7 +10,6 @@ const replaceRefs = (text, spacing, result) =>
       }</span>${spacing}`;
 
 const htmlize = (text, results, replacer = replaceRefs) =>
-  console.log(results) ||
   results
     .reduce(
       (cur, result) =>
@@ -18,13 +17,15 @@ const htmlize = (text, results, replacer = replaceRefs) =>
           new RegExp(`(${result.source})(\\s)`, ""),
           (_, text, spacing) => replacer(text, spacing, result)
         ),
-      text
+      ` ${text} `
     )
     .replace(/\n/gi, "<br>");
 
 const replace = (text, defaultCode) => {
   const results = detect(text, defaultCode);
-  return htmlize(text, results);
+  return htmlize(text, results).trim();
 };
 
 module.exports = replace;
+
+

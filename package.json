@@ -11,9 +11,9 @@
   },
   "scripts": {
     "build": "lerna run build",
-    "dev": "lerna run dev --parallel",
-    "lint": "lerna run lint --parallel",
-    "start": "lerna run start --parallel",
-    "test": "lerna run test --parallel"
+    "dev": "lerna run dev",
+    "lint": "lerna run lint",
+    "start": "lerna run start",
+    "test": "lerna run test"
   }
 }
