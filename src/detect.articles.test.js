@@ -13,46 +13,62 @@ const tests = [
   { input: `Article D212 du code civil`, expected: ["D-212 du Code civil"] },
   { input: `Article D212 du code pénal`, expected: ["D-212 du Code pénal"] },
   {
-    input: `Article D212 du code pénal et R413 du code civil`,
-    expected: ["D-212 du Code pénal", "R-413 du Code civil"]
+    input: `Article D212 du code penal et R413 du code civil`,
+    expected: ["D-212 du CODE PENAL", "R-413 du Code civil"]
   }
 ];
 
 // add tests for variants
-tests.forEach(test => {
+tests.forEach(t => {
   // in some text
   tests.push({
-    input: `random text ${test.input} random text`,
-    expected: test.expected
+    input: `random text ${t.input} random text`,
+    expected: t.expected
   });
   // multiple matches
   tests.push({
-    input: `random text ${test.input} random text ${test.input} random text`,
-    expected:
-      (test.expected.length && test.expected.concat(...test.expected)) || []
+    input: `random text ${t.input} random text ${t.input} random text`,
+    expected: (t.expected.length && t.expected.concat(...t.expected)) || []
   });
   // multilines
   tests.push({
     input: `random text
-${test.input} random
+  ${t.input} random
 
-text ${test.input}
+  text ${t.input}
 
-random text`,
-    expected:
-      (test.expected.length && test.expected.concat(...test.expected)) || []
+  random text`,
+    expected: (t.expected.length && t.expected.concat(...t.expected)) || []
   });
 });
 
-tests.forEach(test => {
-  it(`${test.input} => ${test.expected.join(", ")}`, () => {
-    const references = detectArticles(test.input);
-    if (!test.expected.length) {
+tests.forEach(t => {
+  it(`${t.input.replace(/\n/gm, " ")} => ${t.expected.join(", ")}`, () => {
+    const references = detectArticles(t.input);
+    if (!t.expected.length) {
       expect(references.length).toEqual(0);
     } else {
-      expect(references.map(ref => ref.value)).toEqual(test.expected);
+      expect(references.map(ref => ref.value)).toEqual(t.expected);
     }
     expect(references).toMatchSnapshot();
   });
 });
 
+it("should use defaultCode if provided", () => {
+  const references = detectArticles(`Article D.212-5-6`, {
+    value: "code du test",
+    id: "abc"
+  });
+  expect(references).toMatchSnapshot();
+});
+
+it("Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi", () => {
+  const references = detectArticles(
+    "Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi de suite",
+    {
+      value: "code du test",
+      id: "abc"
+    }
+  );
+  expect(references).toMatchSnapshot();
+});

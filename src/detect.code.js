@@ -14,6 +14,7 @@ export const maxCodeWordsCount = 12;
 // detect the most probable code for a given string with 95% score required
 const detectSingleCode = source => {
   const matches = codes
+    .filter(code => (code.etat = "VIGUEUR"))
     .map(code => ({
       code,
       source,

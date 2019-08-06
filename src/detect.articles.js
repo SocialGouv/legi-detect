@@ -20,39 +20,51 @@ const getSubPhraseFromIndex = (str, index, wordsCount = maxCodeWordsCount) =>
   getWords(str.substring(index), wordsCount).join(" ");
 
 // find and normalize article references
-export const detectArticles = str => {
+export const detectArticles = (str, defaultCode) => {
   const matches = str.match(new RegExp(RE_ARTICLE, "gi"));
+  let startIndex = 0;
   return (
     (matches &&
       matches.map(match => {
+        const indexOfArticle = str.indexOf(match, startIndex);
+
         const parts = match.match(new RegExp(RE_ARTICLE, "i"));
+        const article = {
+          source: match,
+          value: `${parts[1]}-${parts[2]}`
+        };
+
         const codeSearchString = getSubPhraseFromIndex(
           str,
-          str.indexOf(match) + match.length
+          indexOfArticle + match.length
         );
+
         const code = detectCode(codeSearchString);
+
         const sourceString = code
           ? str.substring(
-              str.indexOf(match),
-              str.indexOf(match) + `${match} du ${code.source}`.length
+              indexOfArticle,
+              indexOfArticle + `${match} du ${code.source}`.length
             )
-          : str.substring(
-              str.indexOf(match),
-              str.indexOf(match) + match.length
-            );
-        const articleValue = `${parts[1]}-${parts[2]}`;
+          : str.substring(indexOfArticle, indexOfArticle + match.length);
+
         const valueString = code
-          ? `${articleValue} du ${code.value}`
-          : `${articleValue}`;
+          ? `${article.value} du ${code.value}`
+          : `${article.value}`;
+
+        const fullValueString =
+          code || defaultCode
+            ? `${article.value} du ${(code || defaultCode).value}`
+            : `${article.value}`;
+
+        startIndex = indexOfArticle;
 
         return {
           source: sourceString,
+          fullValue: fullValueString,
           value: valueString,
-          article: {
-            source: match,
-            value: `${articleValue}`
-          },
-          code
+          article,
+          code: code || defaultCode
         };
       })) ||
     []
