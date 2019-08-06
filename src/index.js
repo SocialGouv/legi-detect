@@ -19,7 +19,7 @@ article L1131-1 du code de la défense
 2° L'article L. 2232-5-1 est ainsi modifié :
 a) Les premier et deuxième alinéas de l'article L. 2232-5-1 sont remplacés par les dispositions suivantes :
 « La branche a pour missions :
-« 1° De définir les conditions d'emploi et de travail des salariés ainsi que les garanties qui leur sont applicables dans les matières mentionnées aux articles L. 2253-1 et L. 2253-2-42 dans les conditions prévues par lesdits articles. » ;
+« 1° De définir les conditions d'emploi et de travail des salariés ainsi que les garanties qui leur sont applicables dans les matières mentionnées aux articles L. 2253-1 et D1143-4 dans les conditions prévues par lesdits articles. » ;
 b) Le 2° de l'article L. 2232-5-1 est supprimé ;
 c) Le 3° devient le 2° ;
 

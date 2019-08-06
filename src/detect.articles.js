@@ -11,7 +11,11 @@ const SINGLE_ARTICLE =
 const RE_ARTICLE = "article\\s+" + SINGLE_ARTICLE + "\\b";
 
 const RE_ARTICLES =
-  "articles\\s+" + SINGLE_ARTICLE + "\\s+(a|à|et)\\s+" + SINGLE_ARTICLE + "\\b";
+  "articles\\s+(" +
+  SINGLE_ARTICLE +
+  ")\\s+(a|à|et)\\s+(" +
+  SINGLE_ARTICLE +
+  ")\\b";
 
 const getWords = (str, count, startWordIndex = 0) =>
   str
@@ -27,75 +31,105 @@ const detectMultiples = (str, defaultCode) => {
   let startIndex = 0;
   return (
     matches &&
-    matches.map(match => {
-      const parts = match.match(new RegExp(RE_ARTICLES, "i"));
-      const articles = [
-        `${parts[1] || ""}${parts[2]}`,
-        `${parts[6] || ""}${parts[7]}`
-      ];
-      const indexOfArticles = str.indexOf(match, startIndex);
+    matches
+      .map(match => {
+        const parts = match.match(new RegExp(RE_ARTICLES, "i"));
+        console.log("parts", parts);
+        const articles = [
+          `${parts[2] || ""}${parts[3]}`,
+          `${parts[8] || ""}${parts[9]}`
+        ];
+        const indexOfArticles = str.indexOf(match, startIndex);
 
-      const operator = parts[5];
+        const operator = parts[6];
 
-      const codeSearchString = getSubPhraseFromIndex(
-        str,
-        indexOfArticles + match.length
-      );
+        const codeSearchString = getSubPhraseFromIndex(
+          str,
+          indexOfArticles + match.length
+        );
 
-      startIndex = indexOfArticles + match.length;
+        startIndex = indexOfArticles + match.length;
 
-      const detectedCode = detectCode(codeSearchString);
+        const detectedCode = detectCode(codeSearchString);
 
-      const sourceString = detectedCode
-        ? str.substring(
-            indexOfArticles,
-            indexOfArticles + `${match} du ${detectedCode.source}`.length
-          )
-        : str.substring(indexOfArticles, indexOfArticles + match.length);
+        const sourceString = detectedCode
+          ? str.substring(
+              indexOfArticles,
+              indexOfArticles + `${match} du ${detectedCode.source}`.length
+            )
+          : str.substring(indexOfArticles, indexOfArticles + match.length);
 
-      const valueString = detectedCode
-        ? `Articles ${articles[0]} ${operator} ${articles[1]} du ${
-            detectedCode.value
-          }`
-        : `Articles ${articles[0]} ${operator} ${articles[1]}`;
+        const valueString = detectedCode
+          ? `Articles ${articles[0]} ${operator} ${articles[1]} du ${
+              detectedCode.value
+            }`
+          : `Articles ${articles[0]} ${operator} ${articles[1]}`;
 
-      const code = detectedCode || defaultCode;
+        const code = detectedCode || defaultCode;
 
-      const fullValueString = code
-        ? `Articles ${articles[0]} ${operator} ${articles[1]} du ${code.value}`
-        : `Articles ${articles[0]} ${operator} ${articles[1]}`;
-
-      let url;
-      if (code) {
-        try {
-          const codeData = require(`./data/articles/${code.id}.json`);
-          const id = codeData[articles[0]];
-          if (id) {
-            url = `https://www.legifrance.gouv.fr/affichCode.do?idArticle=${id}&cidTexte=${
-              code.id
-            }`;
-          }
-        } catch (e) {
-          console.log("e", e);
+        if (operator.toLowerCase() === "et") {
+          const firstArticle = detectSingle(`Article ${articles[0]}`, code)[0];
+          const secondArticle = detectSingle(`Article ${articles[1]}`, code)[0];
+          return [
+            {
+              ...firstArticle,
+              source: `articles ${parts[1]}`
+            },
+            {
+              ...secondArticle,
+              source: `${parts[7]}`
+            }
+          ];
         }
-      }
-      return {
-        source: sourceString,
-        fullValue: fullValueString,
-        value: valueString,
-        //article,
-        code,
-        url
-      };
-    })
+
+        const fullValueString = code
+          ? `Articles ${articles[0]} ${operator} ${articles[1]} du ${
+              code.value
+            }`
+          : `Articles ${articles[0]} ${operator} ${articles[1]}`;
+
+        let url;
+        if (code) {
+          try {
+            const codeData = require(`./data/articles/${code.id}.json`);
+            const id = codeData[articles[0]];
+            if (id) {
+              url = `https://www.legifrance.gouv.fr/affichCode.do?idArticle=${id}&cidTexte=${
+                code.id
+              }`;
+            }
+          } catch (e) {
+            console.log("e", e);
+          }
+        }
+        return [
+          {
+            source: sourceString,
+            fullValue: fullValueString,
+            value: valueString,
+            //article,
+            code,
+            url
+          }
+        ];
+      })
+      .reduce((a, c) => [...a, ...((Array.isArray(c) && c) || [c])], [])
   );
 };
 
-// find and normalize article references
+/* find and normalize single article references
+ *
+ * Article D523
+ * Article L523-2
+ * Article L. 523-2-3-2
+ * Article 45
+ * Article * du code du commerce
+ *
+ */
+
 export const detectSingle = (str, defaultCode) => {
+  console.log("str, defaultCode", str, defaultCode);
   const matches = str.match(new RegExp(RE_ARTICLE, "gi"));
-  console.log("matches", matches);
-  console.log("detectMultiples", detectMultiples(str, defaultCode));
   let startIndex = 0;
   return (
     (matches &&
