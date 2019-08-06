@@ -26,6 +26,8 @@ a) Les premier et deuxième alinéas de l'article L. 2232-5-1 sont remplacés pa
 b) Le 2° de l'article L. 2232-5-1 est supprimé ;
 c) Le 3° devient le 2° ;
 
+les fameux articles L311-13 et  L311-18 du Code de l'entrée et du séjour des étrangers et du droit d'asile.
+
 3° L'article R131-33 du code pénal est complété par un deuxième alinéa ainsi rédigé :
 « Sauf disposition contraire, les termes “ convention d'entreprise ” désignent toute convention ou accord conclu soit au niveau de l'entreprise, soit au niveau de l'établissement. » ;
 
@@ -102,7 +104,7 @@ function App() {
             <li>
               <a
                 target="_blank"
-                rel="noopener nofollower"
+                rel="noopener noreferrer"
                 href={`https://www.legifrance.gouv.fr/affichCode.do?cidTexte=${
                   code.id
                 }`}

@@ -26,6 +26,13 @@ const getWords = (str, count, startWordIndex = 0) =>
 const getSubPhraseFromIndex = (str, index, wordsCount = maxCodeWordsCount) =>
   getWords(str.substring(index), wordsCount).join(" ");
 
+/* find and normalize multiple article references
+ *
+ * Articles D523 à L523-2
+ * Articles L523-2 et 523-2-3-2
+ * Articles D523 et L523-2 du code du commerce
+ *
+ */
 const detectMultiples = (str, defaultCode) => {
   const matches = str.match(new RegExp(RE_ARTICLES, "gi"));
   let startIndex = 0;
@@ -135,7 +142,6 @@ const detectMultiples = (str, defaultCode) => {
  */
 
 export const detectSingle = (str, defaultCode) => {
-  console.log("str, defaultCode", str, defaultCode);
   const matches = str.match(new RegExp(RE_ARTICLE, "gi"));
   let startIndex = 0;
   return (
