@@ -180,7 +180,6 @@ const detectSingle = (str, defaultCode) => {
         startIndex = indexOfArticle + match.length;
 
         let url;
-        // console.log("code", code);
         if (code) {
           try {
             const articles = require(`../data/articles/${code.id}.json`);

@@ -6,11 +6,7 @@
       "message": "chore(release): version %v"
     }
   },
-  "packages": [
-    "optional/*",
-    "optional/e2e/*",
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "npmClient": "yarn",
   "version": "23.4.5"
 }
