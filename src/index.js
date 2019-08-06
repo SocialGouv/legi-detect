@@ -5,7 +5,7 @@ import codes from "legi-codes-list";
 
 import "./styles.css";
 
-import detectArticles from "./detect.articles";
+import replace from "./replace";
 
 const SAMPLE_TEXT = `Il était une fois L'Ordonnance n° 2017-95233 du 22 septembre 2017 qui proclama :
 
@@ -52,27 +52,6 @@ function useDebounce(value, delay) {
   return debouncedValue;
 }
 
-const replaceRefs = (text, spacing, result) =>
-  result.url
-    ? ` <a target="_blank" href="${result.url}" class="highlight" title="${
-        result.source
-      }">${result.value}</a>${spacing}`
-    : ` <span class="highlight" title="${result.fullValue}">${
-        result.source
-      }</span>${spacing}`;
-
-const htmlize = (text, results, replacer = replaceRefs) =>
-  results
-    .reduce(
-      (cur, result) =>
-        cur.replace(
-          new RegExp(`(${result.source})(\\s)`, ""),
-          (_, text, spacing) => replacer(text, spacing, result)
-        ),
-      text
-    )
-    .replace(/\n/gi, "<br>");
-
 function App() {
   const [text, setText] = useState(SAMPLE_TEXT);
   const [html, setHtml] = useState("");
@@ -81,12 +60,12 @@ function App() {
 
   useEffect(() => {
     if (debouncedSearchTerm) {
-      const results = detectArticles(text, {
-        id: "LEGITEXT000006072050",
-        value: "Code du travail"
-      });
-      console.log("results", results);
-      setHtml(htmlize(text, results));
+      setHtml(
+        replace(text, {
+          id: "LEGITEXT000006072050",
+          value: "Code du travail"
+        })
+      );
     }
   }, [debouncedSearchTerm]);
 

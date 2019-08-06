@@ -41,7 +41,6 @@ const detectMultiples = (str, defaultCode) => {
       matches
         .map(match => {
           const parts = match.match(new RegExp(RE_ARTICLES, "i"));
-          console.log("parts", parts);
           const articles = [
             `${parts[2] || ""}${parts[3]}`,
             `${parts[8] || ""}${parts[9]}`

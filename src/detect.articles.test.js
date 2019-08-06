@@ -72,7 +72,7 @@ tests2.forEach(t => {
   it(`should use defaultCode for ${t}`, () => {
     const references = detectArticles(t, {
       value: "code du test",
-      id: "abc"
+      id: "LEGITEXT000006070158"
     });
     expect(references).toMatchSnapshot();
   });
@@ -113,7 +113,7 @@ les fameux articles L311-13 et  L311-18 du Code de l'entrée et du séjour des �
 
   const references = detectArticles(SAMPLE_TEXT, {
     value: "code du test",
-    id: "abc"
+    id: "LEGITEXT000006070158"
   });
   expect(references).toMatchSnapshot();
 });
