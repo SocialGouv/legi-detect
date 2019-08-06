@@ -73,7 +73,7 @@ const useDebounce = (value, delay) => {
   return debouncedValue;
 };
 
-const LivePreview = () => {
+const LivePreview = ({ code }) => {
   const [text, setText] = useState(SAMPLE_TEXT);
   const [html, setHtml] = useState("");
 
@@ -83,14 +83,13 @@ const LivePreview = () => {
     if (debouncedSearchTerm) {
       setHtml(
         replace(text, {
-          id: "LEGITEXT000006072050",
+          id: code,
           value: "Code du travail"
         })
       );
     }
-  }, [debouncedSearchTerm]);
+  }, [debouncedSearchTerm, code]);
 
-  console.log("text, html", text, html);
   return (
     <div className="row">
       <textarea
@@ -105,37 +104,57 @@ const LivePreview = () => {
   );
 };
 
-const App = () => (
-  <div className="App container">
-    <h1>legi-detect</h1>
-    <p>Détecte les références aux articles de la base LEGI</p>
-    <ForkMeOnGithub
-      repo="https://github.com/socialgouv/legi-detect"
-      colorBackground="black"
-      colorOctocat="white"
-    />
-    <LivePreview />
-    <hr />
-    <h5>Les codes supportés</h5>
-    <ul>
-      {codes
-        .filter(c => c.etat === "VIGUEUR" && c.titrefull.length < 80)
-        .map(code => (
-          <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={`https://www.legifrance.gouv.fr/affichCode.do?cidTexte=${
-                code.id
-              }`}
-            >
-              {code.titrefull}
-            </a>
-          </li>
-        ))}
-    </ul>
-  </div>
-);
+const App = () => {
+  const [code, setCode] = useState("LEGITEXT000006072050");
+  return (
+    <div className="App container">
+      <h1>legi-detect</h1>
+      <p>Détecte les références aux articles de la base LEGI</p>
+      <div className="form-group">
+        <label for="exampleFormControlSelect1">Contexte du code</label>
+        <select
+          className="form-control"
+          onChange={e => setCode(e.target.value)}
+          id="exampleFormControlSelect1"
+          value={code}
+        >
+          {codes
+            .filter(c => c.etat === "VIGUEUR")
+            .map(code => (
+              <option key={code.id} value={code.id}>
+                {code.titrefull}
+              </option>
+            ))}
+        </select>
+      </div>
+      <ForkMeOnGithub
+        repo="https://github.com/socialgouv/legi-detect"
+        colorBackground="black"
+        colorOctocat="white"
+      />
+      <LivePreview code={code} />
+      <hr />
+      <h5>Les codes supportés</h5>
+      <ul>
+        {codes
+          .filter(c => c.etat === "VIGUEUR" && c.titrefull.length < 80)
+          .map(code => (
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://www.legifrance.gouv.fr/affichCode.do?cidTexte=${
+                  code.id
+                }`}
+              >
+                {code.titrefull}
+              </a>
+            </li>
+          ))}
+      </ul>
+    </div>
+  );
+};
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
