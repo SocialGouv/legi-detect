@@ -52,22 +52,25 @@ function useDebounce(value, delay) {
   return debouncedValue;
 }
 
-const htmlize = (text, results) =>
+const replaceRefs = (text, spacing, result) =>
+  result.url
+    ? ` <a target="_blank" href="${result.url}" class="highlight" title="${
+        result.source
+      }">${result.value}</a>${spacing}`
+    : ` <span class="highlight" title="${result.fullValue}">${
+        result.source
+      }</span>${spacing}`;
+
+const htmlize = (text, results, replacer = replaceRefs) =>
   results
-    .reduce((cur, article) => {
-      return cur.replace(
-        new RegExp(`(${article.source})(\\s)`, ""),
-        article.url
-          ? ` <a target="_blank" href="${
-              article.url
-            }" class="highlight" title="${article.source}">${
-              article.value
-            }</a>$2`
-          : ` <span class="highlight" title="${article.fullValue}">${
-              article.source
-            }</span>$2`
-      );
-    }, text)
+    .reduce(
+      (cur, result) =>
+        cur.replace(
+          new RegExp(`(${result.source})(\\s)`, ""),
+          (_, text, spacing) => replacer(text, spacing, result)
+        ),
+      text
+    )
     .replace(/\n/gi, "<br>");
 
 function App() {
