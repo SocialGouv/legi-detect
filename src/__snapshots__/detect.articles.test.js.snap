@@ -197,41 +197,6 @@ Array [
 
 exports[`Article XD212 =>  1`] = `Array []`;
 
-exports[`Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi 1`] = `
-Array [
-  Object {
-    "article": Object {
-      "source": "L. 123-1",
-      "value": "L-123-1",
-    },
-    "code": Object {
-      "etat": "VIGUEUR",
-      "id": "LEGITEXT000006074947",
-      "source": "code de la route",
-      "value": "Code de la route",
-    },
-    "fullValue": "L-123-1 du Code de la route",
-    "source": "L. 123-1 du code de la route",
-    "value": "L-123-1 du Code de la route",
-  },
-  Object {
-    "article": Object {
-      "source": "L. 2253-3",
-      "value": "L-2253-3",
-    },
-    "code": Object {
-      "etat": "VIGUEUR",
-      "id": "LEGITEXT000006070719",
-      "source": "code pénal",
-      "value": "Code pénal",
-    },
-    "fullValue": "L-2253-3 du Code pénal",
-    "source": "L. 2253-3 du code pénal",
-    "value": "L-2253-3 du Code pénal",
-  },
-]
-`;
-
 exports[`random text   Article D.212 random    text Article D.212    random text => D-212, D-212 1`] = `
 Array [
   Object {
@@ -472,15 +437,11 @@ Array [
     "code": Object {
       "etat": "VIGUEUR",
       "id": "LEGITEXT000006070721",
-      "source": "code civil
-
-",
+      "source": "code civil",
       "value": "Code civil",
     },
     "fullValue": "R-413 du Code civil",
-    "source": "R413 du code civil
-
-",
+    "source": "R413 du code civil",
     "value": "R-413 du Code civil",
   },
 ]
@@ -1107,7 +1068,7 @@ exports[`random text Article XD212 random text =>  1`] = `Array []`;
 
 exports[`random text Article XD212 random text Article XD212 random text =>  1`] = `Array []`;
 
-exports[`should use defaultCode if provided 1`] = `
+exports[`should use defaultCode for Article D.212-5-6 1`] = `
 Array [
   Object {
     "article": Object {
@@ -1121,6 +1082,89 @@ Array [
     "fullValue": "D-212-5-6 du code du test",
     "source": "D.212-5-6",
     "value": "D-212-5-6",
+  },
+]
+`;
+
+exports[`should use defaultCode for Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi de suite 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "L. 123-1",
+      "value": "L-123-1",
+    },
+    "code": Object {
+      "etat": "VIGUEUR",
+      "id": "LEGITEXT000006074947",
+      "source": "code de la route",
+      "value": "Code de la route",
+    },
+    "fullValue": "L-123-1 du Code de la route",
+    "source": "L. 123-1 du code de la route",
+    "value": "L-123-1 du Code de la route",
+  },
+  Object {
+    "article": Object {
+      "source": "L. 2253-3",
+      "value": "L-2253-3",
+    },
+    "code": Object {
+      "etat": "VIGUEUR",
+      "id": "LEGITEXT000006070719",
+      "source": "code pénal",
+      "value": "Code pénal",
+    },
+    "fullValue": "L-2253-3 du Code pénal",
+    "source": "L. 2253-3 du code pénal",
+    "value": "L-2253-3 du Code pénal",
+  },
+]
+`;
+
+exports[`should use defaultCode for Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi de suite et l'article D123-4 est OK 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "L. 123-1",
+      "value": "L-123-1",
+    },
+    "code": Object {
+      "etat": "VIGUEUR",
+      "id": "LEGITEXT000006074947",
+      "source": "code de la route",
+      "value": "Code de la route",
+    },
+    "fullValue": "L-123-1 du Code de la route",
+    "source": "L. 123-1 du code de la route",
+    "value": "L-123-1 du Code de la route",
+  },
+  Object {
+    "article": Object {
+      "source": "L. 2253-3",
+      "value": "L-2253-3",
+    },
+    "code": Object {
+      "etat": "VIGUEUR",
+      "id": "LEGITEXT000006070719",
+      "source": "code pénal",
+      "value": "Code pénal",
+    },
+    "fullValue": "L-2253-3 du Code pénal",
+    "source": "L. 2253-3 du code pénal",
+    "value": "L-2253-3 du Code pénal",
+  },
+  Object {
+    "article": Object {
+      "source": "D123-4",
+      "value": "D-123-4",
+    },
+    "code": Object {
+      "id": "abc",
+      "value": "code du test",
+    },
+    "fullValue": "D-123-4 du code du test",
+    "source": "D123-4",
+    "value": "D-123-4",
   },
 ]
 `;

@@ -54,21 +54,20 @@ tests.forEach(t => {
   });
 });
 
-it("should use defaultCode if provided", () => {
-  const references = detectArticles(`Article D.212-5-6`, {
-    value: "code du test",
-    id: "abc"
-  });
-  expect(references).toMatchSnapshot();
-});
+const tests2 = `
+Article D.212-5-6
+Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi de suite
+Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi de suite et l'article D123-4 est OK
+`
+  .split("\n")
+  .filter(Boolean);
 
-it("Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi", () => {
-  const references = detectArticles(
-    "Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi de suite",
-    {
+tests2.forEach(t => {
+  it(`should use defaultCode for ${t}`, () => {
+    const references = detectArticles(t, {
       value: "code du test",
       id: "abc"
-    }
-  );
-  expect(references).toMatchSnapshot();
+    });
+    expect(references).toMatchSnapshot();
+  });
 });

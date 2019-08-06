@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import debounce from "lodash.debounce";
 
 import "./styles.css";
 
@@ -27,26 +28,56 @@ c) Le 3° devient le 2° ;
 
 `;
 
-function App() {
-  console.log("SAMPLE_TEXT", SAMPLE_TEXT);
-  const articles = detectArticles(SAMPLE_TEXT, {
-    id: "abc",
-    value: "Code du travail"
-  });
-  console.log("articles", articles);
-  const text = articles.reduce((cur, article) => {
+function useDebounce(value, delay) {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+  return debouncedValue;
+}
+
+const htmlize = (text, results) =>
+  results.reduce((cur, article) => {
     return cur.replace(
       article.source,
       `<span class="highlight" title="${article.fullValue}">${
         article.value
       }</span>`
     );
-  }, SAMPLE_TEXT);
+  }, text.replace(/\n/gi, "<br>"));
+
+function App() {
+  const [text, setText] = useState(SAMPLE_TEXT);
+  const [html, setHtml] = useState("");
+
+  const debouncedSearchTerm = useDebounce(text, 300);
+
+  useEffect(() => {
+    if (debouncedSearchTerm) {
+      const results = detectArticles(text, {
+        id: "abc",
+        value: "Code du travail"
+      });
+      setHtml(htmlize(text, results));
+    }
+  }, [debouncedSearchTerm]);
+
   return (
-    <div className="App">
+    <div className="App container">
       <h1>article-detect</h1>
-      <div dangerouslySetInnerHTML={{ __html: text }} />
-      <pre style={{ padding: 5, background: "#efefef" }}>{SAMPLE_TEXT}</pre>
+      <textarea
+        className="form-control"
+        onChange={e => setText(e.target.value)}
+        style={{ width: "100%", height: 400 }}
+        value={text}
+      />
+      <br />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
 }

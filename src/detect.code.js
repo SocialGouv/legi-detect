@@ -32,8 +32,9 @@ export const detectCode = str => {
     detectSingleCode(
       str
         .replace(/^(du )/i, "")
+        .split(/\n/)[0]
         .split(" ")
-        .slice(0, k + 2)
+        .slice(0, k + 1)
         .join(" ")
     )
   )

@@ -7,6 +7,7 @@
   "dependencies": {
     "fuzzball": "1.3.0",
     "legi-codes-list": "1.0.0",
+    "lodash.debounce": "^4.0.8",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-scripts": "3.0.1"
