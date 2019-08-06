@@ -10,11 +10,11 @@ const tests = [
   { input: `Article D.212-5-6`, expected: ["D-212-5-6"] },
   { input: `Article D.212-5-6-7`, expected: ["D-212-5-6-7"] },
   { input: `Article XD212`, expected: [] },
-  { input: `Article D212 du code civil`, expected: ["D-212"] },
-  { input: `Article D212 du code pénal`, expected: ["D-212"] },
+  { input: `Article D212 du code civil`, expected: ["D-212 du Code civil"] },
+  { input: `Article D212 du code pénal`, expected: ["D-212 du Code pénal"] },
   {
     input: `Article D212 du code pénal et R413 du code civil`,
-    expected: ["D-212", "R-413"]
+    expected: ["D-212 du Code pénal", "R-413 du Code civil"]
   }
 ];
 

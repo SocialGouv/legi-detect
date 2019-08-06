@@ -4,7 +4,7 @@ exports[`code civil 1`] = `
 Object {
   "id": "LEGITEXT000006070721",
   "source": "code civil",
-  "titre": "Code civil",
+  "value": "Code civil",
 }
 `;
 
@@ -14,7 +14,7 @@ exports[`code penal 1`] = `
 Object {
   "id": "LEGITEXT000006071029",
   "source": "code penal",
-  "titre": "CODE PENAL",
+  "value": "CODE PENAL",
 }
 `;
 
@@ -22,7 +22,7 @@ exports[`code pénal 1`] = `
 Object {
   "id": "LEGITEXT000006070719",
   "source": "code pénal",
-  "titre": "Code pénal",
+  "value": "Code pénal",
 }
 `;
 
@@ -30,7 +30,7 @@ exports[`du code civil et tout 1`] = `
 Object {
   "id": "LEGITEXT000006070721",
   "source": "code civil",
-  "titre": "Code civil",
+  "value": "Code civil",
 }
 `;
 
@@ -38,7 +38,7 @@ exports[`du code de la route 1`] = `
 Object {
   "id": "LEGITEXT000006074947",
   "source": "code de la route",
-  "titre": "Code de la route",
+  "value": "Code de la route",
 }
 `;
 
@@ -48,7 +48,7 @@ exports[`du code penal 1`] = `
 Object {
   "id": "LEGITEXT000006071029",
   "source": "code penal",
-  "titre": "CODE PENAL",
+  "value": "CODE PENAL",
 }
 `;
 
@@ -56,7 +56,7 @@ exports[`du code pennal 1`] = `
 Object {
   "id": "LEGITEXT000006071029",
   "source": "code pennal",
-  "titre": "CODE PENAL",
+  "value": "CODE PENAL",
 }
 `;
 
@@ -64,6 +64,6 @@ exports[`du code pénal et du code civil et du code de la route 1`] = `
 Object {
   "id": "LEGITEXT000006070719",
   "source": "code pénal",
-  "titre": "Code pénal",
+  "value": "Code pénal",
 }
 `;

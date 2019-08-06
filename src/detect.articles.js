@@ -40,9 +40,18 @@ export const detectArticles = str => {
               str.indexOf(match),
               str.indexOf(match) + match.length
             );
+        const articleValue = `${parts[1]}-${parts[2]}`;
+        const valueString = code
+          ? `${articleValue} du ${code.value}`
+          : `${articleValue}`;
+
         return {
           source: sourceString,
-          value: `${parts[1]}-${parts[2]}`,
+          value: valueString,
+          article: {
+            source: match,
+            value: `${articleValue}`
+          },
           code
         };
       })) ||

@@ -3,6 +3,10 @@
 exports[`Article D.212 => D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D.212",
     "value": "D-212",
@@ -13,6 +17,10 @@ Array [
 exports[`Article D.212-5 => D-212-5 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5",
+      "value": "D-212-5",
+    },
     "code": undefined,
     "source": "D.212-5",
     "value": "D-212-5",
@@ -23,6 +31,10 @@ Array [
 exports[`Article D.212-5-6 => D-212-5-6 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5-6",
+      "value": "D-212-5-6",
+    },
     "code": undefined,
     "source": "D.212-5-6",
     "value": "D-212-5-6",
@@ -33,6 +45,10 @@ Array [
 exports[`Article D.212-5-6-7 => D-212-5-6-7 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5-6-7",
+      "value": "D-212-5-6-7",
+    },
     "code": undefined,
     "source": "D.212-5-6-7",
     "value": "D-212-5-6-7",
@@ -43,6 +59,10 @@ Array [
 exports[`Article D-212 => D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D-212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D-212",
     "value": "D-212",
@@ -53,6 +73,10 @@ Array [
 exports[`Article D-212-4 => D-212-4 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D-212-4",
+      "value": "D-212-4",
+    },
     "code": undefined,
     "source": "D-212-4",
     "value": "D-212-4",
@@ -63,6 +87,10 @@ Array [
 exports[`Article D212 => D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D212",
     "value": "D-212",
@@ -70,53 +98,69 @@ Array [
 ]
 `;
 
-exports[`Article D212 du code civil => D-212 1`] = `
+exports[`Article D212 du code civil => D-212 du Code civil 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "D212 du code civil",
-    "value": "D-212",
+    "value": "D-212 du Code civil",
   },
 ]
 `;
 
-exports[`Article D212 du code pénal => D-212 1`] = `
+exports[`Article D212 du code pénal => D-212 du Code pénal 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
 ]
 `;
 
-exports[`Article D212 du code pénal et R413 du code civil => D-212, R-413 1`] = `
+exports[`Article D212 du code pénal et R413 du code civil => D-212 du Code pénal, R-413 du Code civil 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
   Object {
+    "article": Object {
+      "source": "R413",
+      "value": "R-413",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "R413 du code civil",
-    "value": "R-413",
+    "value": "R-413 du Code civil",
   },
 ]
 `;
@@ -124,6 +168,10 @@ Array [
 exports[`Article D212-3 => D-212-3 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212-3",
+      "value": "D-212-3",
+    },
     "code": undefined,
     "source": "D212-3",
     "value": "D-212-3",
@@ -141,11 +189,19 @@ text Article D.212
 random text => D-212, D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D.212",
     "value": "D-212",
   },
   Object {
+    "article": Object {
+      "source": "D.212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D.212",
     "value": "D-212",
@@ -161,11 +217,19 @@ text Article D.212-5
 random text => D-212-5, D-212-5 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5",
+      "value": "D-212-5",
+    },
     "code": undefined,
     "source": "D.212-5",
     "value": "D-212-5",
   },
   Object {
+    "article": Object {
+      "source": "D.212-5",
+      "value": "D-212-5",
+    },
     "code": undefined,
     "source": "D.212-5",
     "value": "D-212-5",
@@ -181,11 +245,19 @@ text Article D.212-5-6
 random text => D-212-5-6, D-212-5-6 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5-6",
+      "value": "D-212-5-6",
+    },
     "code": undefined,
     "source": "D.212-5-6",
     "value": "D-212-5-6",
   },
   Object {
+    "article": Object {
+      "source": "D.212-5-6",
+      "value": "D-212-5-6",
+    },
     "code": undefined,
     "source": "D.212-5-6",
     "value": "D-212-5-6",
@@ -201,11 +273,19 @@ text Article D.212-5-6-7
 random text => D-212-5-6-7, D-212-5-6-7 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5-6-7",
+      "value": "D-212-5-6-7",
+    },
     "code": undefined,
     "source": "D.212-5-6-7",
     "value": "D-212-5-6-7",
   },
   Object {
+    "article": Object {
+      "source": "D.212-5-6-7",
+      "value": "D-212-5-6-7",
+    },
     "code": undefined,
     "source": "D.212-5-6-7",
     "value": "D-212-5-6-7",
@@ -221,11 +301,19 @@ text Article D-212
 random text => D-212, D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D-212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D-212",
     "value": "D-212",
   },
   Object {
+    "article": Object {
+      "source": "D-212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D-212",
     "value": "D-212",
@@ -241,11 +329,19 @@ text Article D-212-4
 random text => D-212-4, D-212-4 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D-212-4",
+      "value": "D-212-4",
+    },
     "code": undefined,
     "source": "D-212-4",
     "value": "D-212-4",
   },
   Object {
+    "article": Object {
+      "source": "D-212-4",
+      "value": "D-212-4",
+    },
     "code": undefined,
     "source": "D-212-4",
     "value": "D-212-4",
@@ -258,25 +354,33 @@ Article D212 du code civil random
 
 text Article D212 du code civil
 
-random text => D-212, D-212 1`] = `
+random text => D-212 du Code civil, D-212 du Code civil 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "D212 du code civil",
-    "value": "D-212",
+    "value": "D-212 du Code civil",
   },
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "D212 du code civil",
-    "value": "D-212",
+    "value": "D-212 du Code civil",
   },
 ]
 `;
@@ -286,43 +390,59 @@ Article D212 du code pénal et R413 du code civil random
 
 text Article D212 du code pénal et R413 du code civil
 
-random text => D-212, R-413, D-212, R-413 1`] = `
+random text => D-212 du Code pénal, R-413 du Code civil, D-212 du Code pénal, R-413 du Code civil 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
   Object {
+    "article": Object {
+      "source": "R413",
+      "value": "R-413",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "R413 du code civil",
-    "value": "R-413",
+    "value": "R-413 du Code civil",
   },
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
   Object {
+    "article": Object {
+      "source": "R413",
+      "value": "R-413",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "R413 du code civil",
-    "value": "R-413",
+    "value": "R-413 du Code civil",
   },
 ]
 `;
@@ -332,25 +452,33 @@ Article D212 du code pénal random
 
 text Article D212 du code pénal
 
-random text => D-212, D-212 1`] = `
+random text => D-212 du Code pénal, D-212 du Code pénal 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
 ]
 `;
@@ -363,11 +491,19 @@ text Article D212
 random text => D-212, D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D212",
     "value": "D-212",
   },
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D212",
     "value": "D-212",
@@ -383,11 +519,19 @@ text Article D212-3
 random text => D-212-3, D-212-3 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212-3",
+      "value": "D-212-3",
+    },
     "code": undefined,
     "source": "D212-3",
     "value": "D-212-3",
   },
   Object {
+    "article": Object {
+      "source": "D212-3",
+      "value": "D-212-3",
+    },
     "code": undefined,
     "source": "D212-3",
     "value": "D-212-3",
@@ -405,6 +549,10 @@ random text =>  1`] = `Array []`;
 exports[`random text Article D.212 random text => D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D.212",
     "value": "D-212",
@@ -415,11 +563,19 @@ Array [
 exports[`random text Article D.212 random text Article D.212 random text => D-212, D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D.212",
     "value": "D-212",
   },
   Object {
+    "article": Object {
+      "source": "D.212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D.212",
     "value": "D-212",
@@ -430,6 +586,10 @@ Array [
 exports[`random text Article D.212-5 random text => D-212-5 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5",
+      "value": "D-212-5",
+    },
     "code": undefined,
     "source": "D.212-5",
     "value": "D-212-5",
@@ -440,11 +600,19 @@ Array [
 exports[`random text Article D.212-5 random text Article D.212-5 random text => D-212-5, D-212-5 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5",
+      "value": "D-212-5",
+    },
     "code": undefined,
     "source": "D.212-5",
     "value": "D-212-5",
   },
   Object {
+    "article": Object {
+      "source": "D.212-5",
+      "value": "D-212-5",
+    },
     "code": undefined,
     "source": "D.212-5",
     "value": "D-212-5",
@@ -455,6 +623,10 @@ Array [
 exports[`random text Article D.212-5-6 random text => D-212-5-6 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5-6",
+      "value": "D-212-5-6",
+    },
     "code": undefined,
     "source": "D.212-5-6",
     "value": "D-212-5-6",
@@ -465,11 +637,19 @@ Array [
 exports[`random text Article D.212-5-6 random text Article D.212-5-6 random text => D-212-5-6, D-212-5-6 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5-6",
+      "value": "D-212-5-6",
+    },
     "code": undefined,
     "source": "D.212-5-6",
     "value": "D-212-5-6",
   },
   Object {
+    "article": Object {
+      "source": "D.212-5-6",
+      "value": "D-212-5-6",
+    },
     "code": undefined,
     "source": "D.212-5-6",
     "value": "D-212-5-6",
@@ -480,6 +660,10 @@ Array [
 exports[`random text Article D.212-5-6-7 random text => D-212-5-6-7 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5-6-7",
+      "value": "D-212-5-6-7",
+    },
     "code": undefined,
     "source": "D.212-5-6-7",
     "value": "D-212-5-6-7",
@@ -490,11 +674,19 @@ Array [
 exports[`random text Article D.212-5-6-7 random text Article D.212-5-6-7 random text => D-212-5-6-7, D-212-5-6-7 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D.212-5-6-7",
+      "value": "D-212-5-6-7",
+    },
     "code": undefined,
     "source": "D.212-5-6-7",
     "value": "D-212-5-6-7",
   },
   Object {
+    "article": Object {
+      "source": "D.212-5-6-7",
+      "value": "D-212-5-6-7",
+    },
     "code": undefined,
     "source": "D.212-5-6-7",
     "value": "D-212-5-6-7",
@@ -505,6 +697,10 @@ Array [
 exports[`random text Article D-212 random text => D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D-212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D-212",
     "value": "D-212",
@@ -515,11 +711,19 @@ Array [
 exports[`random text Article D-212 random text Article D-212 random text => D-212, D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D-212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D-212",
     "value": "D-212",
   },
   Object {
+    "article": Object {
+      "source": "D-212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D-212",
     "value": "D-212",
@@ -530,6 +734,10 @@ Array [
 exports[`random text Article D-212-4 random text => D-212-4 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D-212-4",
+      "value": "D-212-4",
+    },
     "code": undefined,
     "source": "D-212-4",
     "value": "D-212-4",
@@ -540,11 +748,19 @@ Array [
 exports[`random text Article D-212-4 random text Article D-212-4 random text => D-212-4, D-212-4 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D-212-4",
+      "value": "D-212-4",
+    },
     "code": undefined,
     "source": "D-212-4",
     "value": "D-212-4",
   },
   Object {
+    "article": Object {
+      "source": "D-212-4",
+      "value": "D-212-4",
+    },
     "code": undefined,
     "source": "D-212-4",
     "value": "D-212-4",
@@ -552,140 +768,188 @@ Array [
 ]
 `;
 
-exports[`random text Article D212 du code civil random text => D-212 1`] = `
+exports[`random text Article D212 du code civil random text => D-212 du Code civil 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "D212 du code civil",
-    "value": "D-212",
+    "value": "D-212 du Code civil",
   },
 ]
 `;
 
-exports[`random text Article D212 du code civil random text Article D212 du code civil random text => D-212, D-212 1`] = `
+exports[`random text Article D212 du code civil random text Article D212 du code civil random text => D-212 du Code civil, D-212 du Code civil 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "D212 du code civil",
-    "value": "D-212",
+    "value": "D-212 du Code civil",
   },
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "D212 du code civil",
-    "value": "D-212",
+    "value": "D-212 du Code civil",
   },
 ]
 `;
 
-exports[`random text Article D212 du code pénal et R413 du code civil random text => D-212, R-413 1`] = `
+exports[`random text Article D212 du code pénal et R413 du code civil random text => D-212 du Code pénal, R-413 du Code civil 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
   Object {
+    "article": Object {
+      "source": "R413",
+      "value": "R-413",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "R413 du code civil",
-    "value": "R-413",
+    "value": "R-413 du Code civil",
   },
 ]
 `;
 
-exports[`random text Article D212 du code pénal et R413 du code civil random text Article D212 du code pénal et R413 du code civil random text => D-212, R-413, D-212, R-413 1`] = `
+exports[`random text Article D212 du code pénal et R413 du code civil random text Article D212 du code pénal et R413 du code civil random text => D-212 du Code pénal, R-413 du Code civil, D-212 du Code pénal, R-413 du Code civil 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
   Object {
+    "article": Object {
+      "source": "R413",
+      "value": "R-413",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "R413 du code civil",
-    "value": "R-413",
+    "value": "R-413 du Code civil",
   },
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
   Object {
+    "article": Object {
+      "source": "R413",
+      "value": "R-413",
+    },
     "code": Object {
       "id": "LEGITEXT000006070721",
       "source": "code civil",
-      "titre": "Code civil",
+      "value": "Code civil",
     },
     "source": "R413 du code civil",
-    "value": "R-413",
+    "value": "R-413 du Code civil",
   },
 ]
 `;
 
-exports[`random text Article D212 du code pénal random text => D-212 1`] = `
+exports[`random text Article D212 du code pénal random text => D-212 du Code pénal 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
 ]
 `;
 
-exports[`random text Article D212 du code pénal random text Article D212 du code pénal random text => D-212, D-212 1`] = `
+exports[`random text Article D212 du code pénal random text Article D212 du code pénal random text => D-212 du Code pénal, D-212 du Code pénal 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": Object {
       "id": "LEGITEXT000006070719",
       "source": "code pénal",
-      "titre": "Code pénal",
+      "value": "Code pénal",
     },
     "source": "D212 du code pénal",
-    "value": "D-212",
+    "value": "D-212 du Code pénal",
   },
 ]
 `;
@@ -693,6 +957,10 @@ Array [
 exports[`random text Article D212 random text => D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D212",
     "value": "D-212",
@@ -703,11 +971,19 @@ Array [
 exports[`random text Article D212 random text Article D212 random text => D-212, D-212 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D212",
     "value": "D-212",
   },
   Object {
+    "article": Object {
+      "source": "D212",
+      "value": "D-212",
+    },
     "code": undefined,
     "source": "D212",
     "value": "D-212",
@@ -718,6 +994,10 @@ Array [
 exports[`random text Article D212-3 random text => D-212-3 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212-3",
+      "value": "D-212-3",
+    },
     "code": undefined,
     "source": "D212-3",
     "value": "D-212-3",
@@ -728,11 +1008,19 @@ Array [
 exports[`random text Article D212-3 random text Article D212-3 random text => D-212-3, D-212-3 1`] = `
 Array [
   Object {
+    "article": Object {
+      "source": "D212-3",
+      "value": "D-212-3",
+    },
     "code": undefined,
     "source": "D212-3",
     "value": "D-212-3",
   },
   Object {
+    "article": Object {
+      "source": "D212-3",
+      "value": "D-212-3",
+    },
     "code": undefined,
     "source": "D212-3",
     "value": "D-212-3",

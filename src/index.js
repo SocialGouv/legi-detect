@@ -3,43 +3,38 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 
-import detect from "./detect.code";
+import detectArticles from "./detect.articles";
 
-import legi from "legi-codes-list";
+const SAMPLE_TEXT = `
+Il était une fois L'Ordonnance n° 2017-1385 du 22 septembre 2017 qui modifia :
 
-export const RE_ARTICLE = /([LRD])\s*[.-\s]?\s*((\d+(?:-\d+)?))/;
+1° L'article L. 2232-5 du code du travail est complété par un deuxième alinéa ainsi rédigé :
+« Sauf disposition contraire, les termes “ convention de branche ” désignent la convention collective et les accords de branche, les accords professionnels et les accords interbranches. » ;
 
-const findReferences = texte =>
-  texte && texte.match(/([LR]\s*[.-\s]?\s*\d+(?:-\d+)?)( du code)?/g);
+2° L'article L. 2232-5-1 est ainsi modifié :
+a) Les premier et deuxième alinéas de l'article L. 2232-5-1 sont remplacés par les dispositions suivantes :
+« La branche a pour missions :
+« 1° De définir les conditions d'emploi et de travail des salariés ainsi que les garanties qui leur sont applicables dans les matières mentionnées aux articles L. 2253-1 et L. 2253-2 dans les conditions prévues par lesdits articles. » ;
+b) Le 2° de l'article L. 2232-5-1 est supprimé ;
+c) Le 3° devient le 2° ;
 
-//.map(normalizeReference);
-const normalizeReference = ref => {
-  const matches = ref.match(/([LRD])\s*[.-\s]?\s*(\d+(?:-\d+)?)/);
-  return `${matches[1]}${matches[2]}`;
-};
+3° L'article L. 2232-11 est complété par un deuxième alinéa ainsi rédigé :
+« Sauf disposition contraire, les termes “ convention d'entreprise ” désignent toute convention ou accord conclu soit au niveau de l'entreprise, soit au niveau de l'établissement. » ;
 
-const highlight = (texte, strings) => {
-  strings.forEach(string => {
-    texte = texte.replace(
-      new RegExp(`(${string})`, "gmi"),
-      `<span class="highlight">$1</span>`
-    );
-  });
-  return texte;
-};
+4° Les articles L. 2253-1 à L. 2253-3 sont remplacés par les dispositions suivantes :
 
-const rmHighlight = html =>
-  html.replace(
-    new RegExp(`<span class="highlight">([^<]+)</span>`, "gim"),
-    "$1"
-  );
-
-const getHighlightedHtml = html => highlight(html, findReferences(html));
+`;
 
 function App() {
+  const articles = detectArticles(SAMPLE_TEXT);
+  console.log("articles", articles);
   return (
     <div className="App">
       <h1>article-detect</h1>
+      <pre style={{ padding: 5, background: "#efefef" }}>{SAMPLE_TEXT}</pre>
+      {articles.map(article => (
+        <div>{article.value}</div>
+      ))}
     </div>
   );
 }

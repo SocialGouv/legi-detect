@@ -5,7 +5,7 @@ import sortByKey from "./lib/sortByKey";
 
 const codes = legi.map(code => ({
   id: code.id,
-  titre: code.titre
+  value: code.titre
 }));
 
 // the max code length is 18; we focus on 12 wich cover +95% of cases and improve performance/precision
@@ -17,7 +17,7 @@ const detectSingleCode = source => {
     .map(code => ({
       code,
       source,
-      score: fuzz.ratio(code.titre, source)
+      score: fuzz.ratio(code.value, source)
     }))
     .sort(sortByKey("score"))
     .filter(result => result.score >= 95);
