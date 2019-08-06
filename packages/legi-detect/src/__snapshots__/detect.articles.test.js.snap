@@ -1,5 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Article D*212-4 => Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D*212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D*212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
+
+exports[`Article D.  212-4 => Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D.  212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D.  212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
+
+exports[`Article D. 212-4 => Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D. 212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D. 212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
+
 exports[`Article D.212 => Article D212 1`] = `
 Array [
   Object {
@@ -208,6 +256,87 @@ Array [
 `;
 
 exports[`Article XD212 =>  1`] = `Array []`;
+
+exports[`random text   Article D*212-4 random    text Article D*212-4    random text => Article D212-4, Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D*212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D*212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+  Object {
+    "article": Object {
+      "source": "Article D*212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D*212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
+
+exports[`random text   Article D.  212-4 random    text Article D.  212-4    random text => Article D212-4, Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D.  212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D.  212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+  Object {
+    "article": Object {
+      "source": "Article D.  212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D.  212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
+
+exports[`random text   Article D. 212-4 random    text Article D. 212-4    random text => Article D212-4, Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D. 212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D. 212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+  Object {
+    "article": Object {
+      "source": "Article D. 212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D. 212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
 
 exports[`random text   Article D.212 random    text Article D.212    random text => Article D212, Article D212 1`] = `
 Array [
@@ -569,6 +698,135 @@ Array [
 `;
 
 exports[`random text   Article XD212 random    text Article XD212    random text =>  1`] = `Array []`;
+
+exports[`random text Article D*212-4 random text => Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D*212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D*212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
+
+exports[`random text Article D*212-4 random text Article D*212-4 random text => Article D212-4, Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D*212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D*212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+  Object {
+    "article": Object {
+      "source": "Article D*212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D*212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
+
+exports[`random text Article D.  212-4 random text => Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D.  212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D.  212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
+
+exports[`random text Article D.  212-4 random text Article D.  212-4 random text => Article D212-4, Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D.  212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D.  212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+  Object {
+    "article": Object {
+      "source": "Article D.  212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D.  212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
+
+exports[`random text Article D. 212-4 random text => Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D. 212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D. 212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
+
+exports[`random text Article D. 212-4 random text Article D. 212-4 random text => Article D212-4, Article D212-4 1`] = `
+Array [
+  Object {
+    "article": Object {
+      "source": "Article D. 212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D. 212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+  Object {
+    "article": Object {
+      "source": "Article D. 212-4",
+      "value": "D212-4",
+    },
+    "code": undefined,
+    "fullValue": "Article D212-4",
+    "source": "Article D. 212-4",
+    "url": undefined,
+    "value": "Article D212-4",
+  },
+]
+`;
 
 exports[`random text Article D.212 random text => Article D212 1`] = `
 Array [
