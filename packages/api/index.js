@@ -10,9 +10,10 @@ app.use(express.json());
 
 app.post("/", (req, res) => {
   const text = req.body.text;
+  const code = req.body.code;
   if (text) {
     return res.json({
-      html: replace(text)
+      html: replace(text, code)
     });
   }
   return res.status(500).json({ error: "empty text" });

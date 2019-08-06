@@ -9,6 +9,11 @@
     "express": "^4.17.1"
   },
   "scripts": {
-    "start": "node index"
+    "start": "node index",
+    "server": "node build/index",
+    "build": "ncc build index.js -o build"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.4"
   }
 }

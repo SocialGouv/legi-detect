@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:12-alpine as builder
 
 WORKDIR /app
 
@@ -8,4 +8,13 @@ RUN yarn --frozen-lockfile
 
 WORKDIR /app/packages/api
 
-ENTRYPOINT ["yarn", "start"]
+RUN yarn build
+
+FROM node:12-alpine
+
+WORKDIR /app
+
+COPY --from=builder /app/packages/api/build/index.js /app
+
+
+ENTRYPOINT ["node", "index"]

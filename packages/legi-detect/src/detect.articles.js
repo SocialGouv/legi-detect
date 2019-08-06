@@ -4,7 +4,7 @@ const { detectCode, maxCodeWordsCount } = require("./detect.code");
 
 const SINGLE_ARTICLE =
   "([LRD])?\\s*" + //           prefix      Article LDR
-  "[.-\\s]?" + //                          separator    -
+  "[.-\\s*]?" + //                          separator    -
   "\\s*" + //                              spaces
   "(\\d{1,4}(-\\d+){0,3})\\b"; //          nums        123 123-45 123-45-6 123-45-6-7
 
