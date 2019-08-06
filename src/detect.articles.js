@@ -30,90 +30,97 @@ const detectMultiples = (str, defaultCode) => {
   const matches = str.match(new RegExp(RE_ARTICLES, "gi"));
   let startIndex = 0;
   return (
-    matches &&
-    matches
-      .map(match => {
-        const parts = match.match(new RegExp(RE_ARTICLES, "i"));
-        console.log("parts", parts);
-        const articles = [
-          `${parts[2] || ""}${parts[3]}`,
-          `${parts[8] || ""}${parts[9]}`
-        ];
-        const indexOfArticles = str.indexOf(match, startIndex);
+    (matches &&
+      matches
+        .map(match => {
+          const parts = match.match(new RegExp(RE_ARTICLES, "i"));
+          console.log("parts", parts);
+          const articles = [
+            `${parts[2] || ""}${parts[3]}`,
+            `${parts[8] || ""}${parts[9]}`
+          ];
+          const indexOfArticles = str.indexOf(match, startIndex);
 
-        const operator = parts[6];
+          const operator = parts[6];
 
-        const codeSearchString = getSubPhraseFromIndex(
-          str,
-          indexOfArticles + match.length
-        );
+          const codeSearchString = getSubPhraseFromIndex(
+            str,
+            indexOfArticles + match.length
+          );
 
-        startIndex = indexOfArticles + match.length;
+          startIndex = indexOfArticles + match.length;
 
-        const detectedCode = detectCode(codeSearchString);
+          const detectedCode = detectCode(codeSearchString);
 
-        const sourceString = detectedCode
-          ? str.substring(
-              indexOfArticles,
-              indexOfArticles + `${match} du ${detectedCode.source}`.length
-            )
-          : str.substring(indexOfArticles, indexOfArticles + match.length);
+          const sourceString = detectedCode
+            ? str.substring(
+                indexOfArticles,
+                indexOfArticles + `${match} du ${detectedCode.source}`.length
+              )
+            : str.substring(indexOfArticles, indexOfArticles + match.length);
 
-        const valueString = detectedCode
-          ? `Articles ${articles[0]} ${operator} ${articles[1]} du ${
-              detectedCode.value
-            }`
-          : `Articles ${articles[0]} ${operator} ${articles[1]}`;
+          const valueString = detectedCode
+            ? `Articles ${articles[0]} ${operator} ${articles[1]} du ${
+                detectedCode.value
+              }`
+            : `Articles ${articles[0]} ${operator} ${articles[1]}`;
 
-        const code = detectedCode || defaultCode;
+          const code = detectedCode || defaultCode;
 
-        if (operator.toLowerCase() === "et") {
-          const firstArticle = detectSingle(`Article ${articles[0]}`, code)[0];
-          const secondArticle = detectSingle(`Article ${articles[1]}`, code)[0];
+          if (operator.toLowerCase() === "et") {
+            const firstArticle = detectSingle(
+              `Article ${articles[0]}`,
+              code
+            )[0];
+            const secondArticle = detectSingle(
+              `Article ${articles[1]}`,
+              code
+            )[0];
+            return [
+              {
+                ...(firstArticle || {}),
+                source: `articles ${parts[1]}`
+              },
+              {
+                ...(secondArticle || {}),
+                source: `${parts[7]}`
+              }
+            ];
+          }
+
+          const fullValueString = code
+            ? `Articles ${articles[0]} ${operator} ${articles[1]} du ${
+                code.value
+              }`
+            : `Articles ${articles[0]} ${operator} ${articles[1]}`;
+
+          let url;
+          if (code) {
+            try {
+              const codeData = require(`./data/articles/${code.id}.json`);
+              const id = codeData[articles[0]];
+              if (id) {
+                url = `https://www.legifrance.gouv.fr/affichCode.do?idArticle=${id}&cidTexte=${
+                  code.id
+                }`;
+              }
+            } catch (e) {
+              console.log("e", e);
+            }
+          }
           return [
             {
-              ...firstArticle,
-              source: `articles ${parts[1]}`
-            },
-            {
-              ...secondArticle,
-              source: `${parts[7]}`
+              source: sourceString,
+              fullValue: fullValueString,
+              value: valueString,
+              //article,
+              code,
+              url
             }
           ];
-        }
-
-        const fullValueString = code
-          ? `Articles ${articles[0]} ${operator} ${articles[1]} du ${
-              code.value
-            }`
-          : `Articles ${articles[0]} ${operator} ${articles[1]}`;
-
-        let url;
-        if (code) {
-          try {
-            const codeData = require(`./data/articles/${code.id}.json`);
-            const id = codeData[articles[0]];
-            if (id) {
-              url = `https://www.legifrance.gouv.fr/affichCode.do?idArticle=${id}&cidTexte=${
-                code.id
-              }`;
-            }
-          } catch (e) {
-            console.log("e", e);
-          }
-        }
-        return [
-          {
-            source: sourceString,
-            fullValue: fullValueString,
-            value: valueString,
-            //article,
-            code,
-            url
-          }
-        ];
-      })
-      .reduce((a, c) => [...a, ...((Array.isArray(c) && c) || [c])], [])
+        })
+        .reduce((a, c) => [...a, ...((Array.isArray(c) && c) || [c])], [])) ||
+    []
   );
 };
 
