@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import ForkMeOnGithub from "fork-me-on-github";
 
 import codes from "legi-codes-list";
 
@@ -8,6 +9,26 @@ import "./styles.css";
 import { replace } from "@socialgouv/legi-detect";
 
 const SAMPLE_TEXT = `Il était une fois L'Ordonnance n° 2017-95233 du 22 septembre 2017 qui proclama :
+
+abbréviation art.  L6361-5
+
+et (Article L6361-5)
+
+Sous-section 1 : Contrôle des dépenses et activités de formation. (Articles L6361-1 à L6361-3)
+
+Section 2 : Agents de contrôle. (Article L6361-5)
+
+Section 3 : Dispositions d'application. (Article L6361-6)
+
+Section 1 : Accès aux documents et justifications à apporter. (Articles L6362-1 à L6362-7-3)
+
+Section 2 : Procédure. Articles L6362-8 à L6362-11
+
+Section 3 : Sanctions. (Article L6362-12)
+
+Section 4 : Dispositions d'application. (Article L6362-13)
+
+Chapitre III : Constatation des infractions et dispositions pénales
 
 1° L'article L. 2232-5 du code du travail est complété par un deuxième alinéa ainsi rédigé :
 « Sauf disposition contraire, les termes “ convention de branche ” désignent la convention collective et les accords de branche, les accords professionnels et les accords interbranches. » ;
@@ -39,7 +60,7 @@ les fameux articles L311-13 et  L311-18 du Code de l'entrée et du séjour des �
 
 `;
 
-function useDebounce(value, delay) {
+const useDebounce = (value, delay) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
   useEffect(() => {
     const handler = setTimeout(() => {
@@ -50,9 +71,9 @@ function useDebounce(value, delay) {
     };
   }, [value, delay]);
   return debouncedValue;
-}
+};
 
-function App() {
+const LivePreview = () => {
   const [text, setText] = useState(SAMPLE_TEXT);
   const [html, setHtml] = useState("");
 
@@ -70,8 +91,7 @@ function App() {
   }, [debouncedSearchTerm]);
 
   return (
-    <div className="App container">
-      <h1>article-detect</h1>
+    <div className="row">
       <textarea
         className="form-control"
         onChange={e => setText(e.target.value)}
@@ -80,28 +100,41 @@ function App() {
       />
       <br />
       <div dangerouslySetInnerHTML={{ __html: html }} />
-      <hr />
-      <h5>Les codes supportés</h5>
-      <ul>
-        {codes
-          .filter(c => c.etat === "VIGUEUR" && c.titrefull.length < 80)
-          .map(code => (
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={`https://www.legifrance.gouv.fr/affichCode.do?cidTexte=${
-                  code.id
-                }`}
-              >
-                {code.titrefull}
-              </a>
-            </li>
-          ))}
-      </ul>
     </div>
   );
-}
+};
+
+const App = () => (
+  <div className="App container">
+    <h1>legi-detect</h1>
+    <p>Détecte les références aux articles de la base LEGI</p>
+    <ForkMeOnGithub
+      repo="https://github.com/socialgouv/legi-detect"
+      colorBackground="black"
+      colorOctocat="white"
+    />
+    <LivePreview />
+    <hr />
+    <h5>Les codes supportés</h5>
+    <ul>
+      {codes
+        .filter(c => c.etat === "VIGUEUR" && c.titrefull.length < 80)
+        .map(code => (
+          <li>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://www.legifrance.gouv.fr/affichCode.do?cidTexte=${
+                code.id
+              }`}
+            >
+              {code.titrefull}
+            </a>
+          </li>
+        ))}
+    </ul>
+  </div>
+);
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);

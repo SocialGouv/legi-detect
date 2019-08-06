@@ -14,7 +14,7 @@ const htmlize = (text, results, replacer = replaceRefs) =>
     .reduce(
       (cur, result) =>
         cur.replace(
-          new RegExp(`(${result.source})(\\s)`, ""),
+          new RegExp(`(${result.source})([\\s)])`, ""),
           (_, text, spacing) => replacer(text, spacing, result)
         ),
       ` ${text} `

@@ -6,14 +6,14 @@ const SINGLE_ARTICLE =
   "([LRD])?\\s*" + //           prefix      Article LDR
   "[.-\\s]?" + //                          separator    -
   "\\s*" + //                              spaces
-  "((\\d{1,4}(-\\d+){0,3}))"; //          nums        123 123-45 123-45-6 123-45-6-7
+  "(\\d{1,4}(-\\d+){0,3})\\b"; //          nums        123 123-45 123-45-6 123-45-6-7
 
-const RE_ARTICLE = "article\\s+" + SINGLE_ARTICLE + "\\b";
+const RE_ARTICLE = "(?:art.|article)\\s+" + SINGLE_ARTICLE;
 
 const RE_ARTICLES =
   "articles\\s+(" +
   SINGLE_ARTICLE +
-  ")\\s+(a|à|et)\\s+(" +
+  ")\\s*(a|à|et)\\s+(" +
   SINGLE_ARTICLE +
   ")\\b";
 

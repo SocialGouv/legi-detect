@@ -81,6 +81,26 @@ tests2.forEach(t => {
 it("should match a bunch of versions", () => {
   const SAMPLE_TEXT = `Il était une fois L'Ordonnance n° 2017-95233 du 22 septembre 2017 qui proclama :
 
+abbréviation art.  L6361-5
+
+et (Article L6361-5)
+
+Sous-section 1 : Contrôle des dépenses et activités de formation. (Articles L6361-1 à L6361-3)
+
+Section 2 : Agents de contrôle. (Article L6361-5)
+
+Section 3 : Dispositions d'application. (Article L6361-6)
+
+Section 1 : Accès aux documents et justifications à apporter. (Articles L6362-1 à L6362-7-3)
+
+Section 2 : Procédure. Articles L6362-8 à L6362-11
+
+Section 3 : Sanctions. (Article L6362-12)
+
+Section 4 : Dispositions d'application. (Article L6362-13)
+
+Chapitre III : Constatation des infractions et dispositions pénales
+
 1° L'article L. 2232-5 du code du travail est complété par un deuxième alinéa ainsi rédigé :
 « Sauf disposition contraire, les termes “ convention de branche ” désignent la convention collective et les accords de branche, les accords professionnels et les accords interbranches. » ;
 

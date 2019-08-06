@@ -1144,6 +1144,90 @@ exports[`should match a bunch of versions 1`] = `
 Array [
   Object {
     "article": Object {
+      "source": "art.  L6361-5",
+      "value": "L6361-5",
+    },
+    "code": Object {
+      "id": "LEGITEXT000006070158",
+      "value": "code du test",
+    },
+    "fullValue": "Article L6361-5 du code du test",
+    "source": "art.  L6361-5",
+    "url": undefined,
+    "value": "Article L6361-5",
+  },
+  Object {
+    "article": Object {
+      "source": "Article L6361-5",
+      "value": "L6361-5",
+    },
+    "code": Object {
+      "id": "LEGITEXT000006070158",
+      "value": "code du test",
+    },
+    "fullValue": "Article L6361-5 du code du test",
+    "source": "Article L6361-5",
+    "url": undefined,
+    "value": "Article L6361-5",
+  },
+  Object {
+    "article": Object {
+      "source": "Article L6361-5",
+      "value": "L6361-5",
+    },
+    "code": Object {
+      "id": "LEGITEXT000006070158",
+      "value": "code du test",
+    },
+    "fullValue": "Article L6361-5 du code du test",
+    "source": "Article L6361-5",
+    "url": undefined,
+    "value": "Article L6361-5",
+  },
+  Object {
+    "article": Object {
+      "source": "Article L6361-6",
+      "value": "L6361-6",
+    },
+    "code": Object {
+      "id": "LEGITEXT000006070158",
+      "value": "code du test",
+    },
+    "fullValue": "Article L6361-6 du code du test",
+    "source": "Article L6361-6",
+    "url": undefined,
+    "value": "Article L6361-6",
+  },
+  Object {
+    "article": Object {
+      "source": "Article L6362-12",
+      "value": "L6362-12",
+    },
+    "code": Object {
+      "id": "LEGITEXT000006070158",
+      "value": "code du test",
+    },
+    "fullValue": "Article L6362-12 du code du test",
+    "source": "Article L6362-12",
+    "url": undefined,
+    "value": "Article L6362-12",
+  },
+  Object {
+    "article": Object {
+      "source": "Article L6362-13",
+      "value": "L6362-13",
+    },
+    "code": Object {
+      "id": "LEGITEXT000006070158",
+      "value": "code du test",
+    },
+    "fullValue": "Article L6362-13 du code du test",
+    "source": "Article L6362-13",
+    "url": undefined,
+    "value": "Article L6362-13",
+  },
+  Object {
+    "article": Object {
       "source": "article L. 2232-5",
       "value": "L2232-5",
     },
@@ -1313,74 +1397,66 @@ Array [
     "value": "Article R131-2 du Code pénal",
   },
   Object {
-    "article": Object {
-      "source": "Article L2253-1",
-      "value": "L2253-1",
-    },
     "code": Object {
       "id": "LEGITEXT000006070158",
       "value": "code du test",
     },
-    "fullValue": "Article L2253-1 du code du test",
-    "source": "articles L. 2253-1",
+    "fullValue": "Articles L6361-1 L6361-3 6361-3-3 du code du test",
+    "source": "Articles L6361-1 à L6361-3",
     "url": undefined,
-    "value": "Article L2253-1",
+    "value": "Articles L6361-1 L6361-3 6361-3-3",
   },
   Object {
-    "article": Object {
-      "source": "Article D1143-4",
-      "value": "D1143-4",
-    },
     "code": Object {
       "id": "LEGITEXT000006070158",
       "value": "code du test",
     },
-    "fullValue": "Article D1143-4 du code du test",
-    "source": "D1143-4",
+    "fullValue": "Articles L6362-1 L6362-7-3 6362-7-3-3 du code du test",
+    "source": "Articles L6362-1 à L6362-7-3",
     "url": undefined,
-    "value": "Article D1143-4",
+    "value": "Articles L6362-1 L6362-7-3 6362-7-3-3",
   },
   Object {
-    "article": Object {
-      "source": "Article L311-13",
-      "value": "L311-13",
+    "code": Object {
+      "id": "LEGITEXT000006070158",
+      "value": "code du test",
     },
+    "fullValue": "Articles L6362-8 L6362-11 6362-11-11 du code du test",
+    "source": "Articles L6362-8 à L6362-11",
+    "url": undefined,
+    "value": "Articles L6362-8 L6362-11 6362-11-11",
+  },
+  Object {
+    "code": Object {
+      "id": "LEGITEXT000006070158",
+      "value": "code du test",
+    },
+    "fullValue": "Articles L2253-1 D1143-4 1143-4-4 du code du test",
+    "source": "articles L. 2253-1 et D1143-4",
+    "url": undefined,
+    "value": "Articles L2253-1 D1143-4 1143-4-4",
+  },
+  Object {
     "code": Object {
       "etat": "VIGUEUR",
       "id": "LEGITEXT000006070158",
       "source": "Code de l'entrée et du séjour des étrangers et du droit",
       "value": "Code de l'entrée et du séjour des étrangers et du droit d'asile",
     },
-    "fullValue": "Article L311-13 du Code de l'entrée et du séjour des étrangers et du droit d'asile",
-    "source": "articles L311-13",
-    "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000037986972&cidTexte=LEGITEXT000006070158",
-    "value": "Article L311-13",
-  },
-  Object {
-    "article": Object {
-      "source": "Article L311-18",
-      "value": "L311-18",
-    },
-    "code": Object {
-      "etat": "VIGUEUR",
-      "id": "LEGITEXT000006070158",
-      "source": "Code de l'entrée et du séjour des étrangers et du droit",
-      "value": "Code de l'entrée et du séjour des étrangers et du droit d'asile",
-    },
-    "fullValue": "Article L311-18 du Code de l'entrée et du séjour des étrangers et du droit d'asile",
-    "source": "L311-18",
-    "url": "https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=LEGIARTI000036429618&cidTexte=LEGITEXT000006070158",
-    "value": "Article L311-18",
+    "fullValue": "Articles L311-13 L311-18 311-18-18 du Code de l'entrée et du séjour des étrangers et du droit d'asile",
+    "source": "articles L311-13 et  L311-18 du Code de l'entrée et du séjour des étrangers et du droit",
+    "url": "https://www.legifrance.gouv.fr/affichCode.do?idArticle=LEGIARTI000037986972&cidTexte=LEGITEXT000006070158",
+    "value": "Articles L311-13 L311-18 311-18-18 du Code de l'entrée et du séjour des étrangers et du droit d'asile",
   },
   Object {
     "code": Object {
       "id": "LEGITEXT000006070158",
       "value": "code du test",
     },
-    "fullValue": "Articles L2253-1 à L2253-3 du code du test",
+    "fullValue": "Articles L2253-1 L. 2253-3 2253-3-3 du code du test",
     "source": "articles L. 2253-1 à L. 2253-3",
     "url": undefined,
-    "value": "Articles L2253-1 à L2253-3",
+    "value": "Articles L2253-1 L. 2253-3 2253-3-3",
   },
   Object {
     "code": Object {
@@ -1389,10 +1465,10 @@ Array [
       "source": "code pénal",
       "value": "Code pénal",
     },
-    "fullValue": "Articles R131-24 à R131-27 du Code pénal",
+    "fullValue": "Articles R131-24 R. 131-27 131-27-27 du Code pénal",
     "source": "articles R131-24 à R. 131-27 du code pénal",
     "url": "https://www.legifrance.gouv.fr/affichCode.do?idArticle=LEGIARTI000006419388&cidTexte=LEGITEXT000006070719",
-    "value": "Articles R131-24 à R131-27 du Code pénal",
+    "value": "Articles R131-24 R. 131-27 131-27-27 du Code pénal",
   },
 ]
 `;

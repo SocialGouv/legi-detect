@@ -1,7 +1,7 @@
 {
   "name": "@socialgouv/legi-detect",
   "version": "1.0.0",
-  "description": "Detect LEGI links in text documents",
+  "description": "Detect and replace LEGI links in text documents",
   "main": "src/index.js",
   "dependencies": {
     "fuzzball": "1.3.0",
