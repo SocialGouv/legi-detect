@@ -1,20 +1,26 @@
-import { detectArticles } from "./detect.articles";
+import detectArticles from "./detect.articles";
 
 const tests = [
-  { input: `Article D212`, expected: ["D212"] },
-  { input: `Article D-212`, expected: ["D212"] },
-  { input: `Article D.212`, expected: ["D212"] },
-  { input: `Article D212-3`, expected: ["D212-3"] },
-  { input: `Article D-212-4`, expected: ["D212-4"] },
-  { input: `Article D.212-5`, expected: ["D212-5"] },
-  { input: `Article D.212-5-6`, expected: ["D212-5-6"] },
-  { input: `Article D.212-5-6-7`, expected: ["D212-5-6-7"] },
+  { input: `Article D212`, expected: ["Article D212"] },
+  { input: `Article D-212`, expected: ["Article D212"] },
+  { input: `Article D.212`, expected: ["Article D212"] },
+  { input: `Article D212-3`, expected: ["Article D212-3"] },
+  { input: `Article D-212-4`, expected: ["Article D212-4"] },
+  { input: `Article D.212-5`, expected: ["Article D212-5"] },
+  { input: `Article D.212-5-6`, expected: ["Article D212-5-6"] },
+  { input: `Article D.212-5-6-7`, expected: ["Article D212-5-6-7"] },
   { input: `Article XD212`, expected: [] },
-  { input: `Article D212 du code civil`, expected: ["D212 du Code civil"] },
-  { input: `Article D212 du code pénal`, expected: ["D212 du Code pénal"] },
   {
-    input: `Article D212 du code penal et R413 du code civil`,
-    expected: ["D212 du CODE PENAL", "R413 du Code civil"]
+    input: `Article D212 du code civil`,
+    expected: ["Article D212 du Code civil"]
+  },
+  {
+    input: `Article D212 du code pénal`,
+    expected: ["Article D212 du Code pénal"]
+  },
+  {
+    input: `Article D212 du code penal et article R413 du code civil`,
+    expected: ["Article D212 du Code pénal", "Article R413 du Code civil"]
   }
 ];
 
@@ -56,8 +62,8 @@ tests.forEach(t => {
 
 const tests2 = `
 Article D.212-5-6
-Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi de suite
-Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi de suite et l'article D123-4 est OK
+L'article L. 123-1 du code de la route est remplacé par L'article D. 2253-3 du code pénal et ainsi de suite
+L'article L. 123-1 du code de la route est remplacé par L'article D. 2253-3 du code pénal et ainsi de suite et l'article D123-4 est OK
 `
   .split("\n")
   .filter(Boolean);
