@@ -11,7 +11,11 @@ const tests = [
   { input: `Article D.212-5-6-7`, expected: ["D-212-5-6-7"] },
   { input: `Article XD212`, expected: [] },
   { input: `Article D212 du code civil`, expected: ["D-212"] },
-  { input: `Article D212 du code pénal`, expected: ["D-212"] }
+  { input: `Article D212 du code pénal`, expected: ["D-212"] },
+  {
+    input: `Article D212 du code pénal et R413 du code civil`,
+    expected: ["D-212", "R-413"]
+  }
 ];
 
 // add tests for variants
@@ -25,7 +29,7 @@ tests.forEach(test => {
   tests.push({
     input: `random text ${test.input} random text ${test.input} random text`,
     expected:
-      (test.expected.length && test.expected.concat(test.expected[0])) || []
+      (test.expected.length && test.expected.concat(...test.expected)) || []
   });
   // multilines
   tests.push({
@@ -36,7 +40,7 @@ text ${test.input}
 
 random text`,
     expected:
-      (test.expected.length && test.expected.concat(test.expected[0])) || []
+      (test.expected.length && test.expected.concat(...test.expected)) || []
   });
 });
 
@@ -52,9 +56,3 @@ tests.forEach(test => {
   });
 });
 
-it.only("aaz", () => {
-  const references = detectArticles(
-    "Article D123-1 du code pénal et D234-2 du code civil"
-  );
-  console.log("references", references);
-});

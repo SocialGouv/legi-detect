@@ -8,8 +8,8 @@ const codes = legi.map(code => ({
   titre: code.titre
 }));
 
-// the max code length is 18; we focus on 12 wich cover +95% of cases and improve performance
-const maxCodeWordsCount = 12;
+// the max code length is 18; we focus on 12 wich cover +95% of cases and improve performance/precision
+export const maxCodeWordsCount = 12;
 
 // detect the most probable code for a given string with 95% score required
 const detectSingleCode = source => {
@@ -20,7 +20,7 @@ const detectSingleCode = source => {
       score: fuzz.ratio(code.titre, source)
     }))
     .sort(sortByKey("score"))
-    .filter(result => result.score > 95);
+    .filter(result => result.score >= 95);
   return matches && matches[0];
 };
 
@@ -38,7 +38,13 @@ export const detectCode = str => {
   )
     .filter(Boolean)
     .sort(sortByKey("score"));
-  return matches && matches[0];
+  const match = matches && matches[0];
+  return (
+    match && {
+      source: match.source,
+      ...match.code
+    }
+  );
 };
 
 export default detectCode;

@@ -20,3 +20,4 @@ tests.forEach(test => {
     expect(detectCode(test)).toMatchSnapshot();
   });
 });
+
