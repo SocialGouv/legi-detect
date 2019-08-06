@@ -1,8 +1,8 @@
 {
   "name": "@socialgouv/legi-detect-demo",
+  "homepage": "http://socialgouv.github.io/legi-detect",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "lodash.debounce": "^4.0.8",

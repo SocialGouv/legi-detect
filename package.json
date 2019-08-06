@@ -7,7 +7,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "esm": "^3.2.25",
     "lerna": "^3.16.4"
   },
   "scripts": {

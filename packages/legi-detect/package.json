@@ -1,8 +1,7 @@
 {
   "name": "@socialgouv/legi-detect",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "Detect LEGI links in text documents",
   "main": "src/index.js",
   "dependencies": {
     "fuzzball": "1.3.0",
@@ -16,5 +15,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "jest-cli": "^24.8.0"
+  }
 }
