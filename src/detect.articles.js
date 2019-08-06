@@ -2,12 +2,10 @@ import detectCode, { maxCodeWordsCount } from "./detect.code";
 
 // poor-man multiline regexp
 const RE_ARTICLE =
-  "" +
-  "\\b" + //                   word start
-  "([LRD])\\s*" + //           prefix      LDR
-  "[.-\\s]?" + //              separator    -
-  "\\s*" + //                  spaces
-  "((\\d{1,4}(-\\d+){0,3}))" + //  nums        123 123-45 123-45-6 123-45-6-7
+  "article\\s+([LRD])?\\s*" + //           prefix      Article LDR
+  "[.-\\s]?" + //                          separator    -
+  "\\s*" + //                              spaces
+  "((\\d{1,4}(-\\d+){0,3}))" + //          nums        123 123-45 123-45-6 123-45-6-7
   "\\b";
 
 const getWords = (str, count, startWordIndex = 0) =>
@@ -22,6 +20,7 @@ const getSubPhraseFromIndex = (str, index, wordsCount = maxCodeWordsCount) =>
 // find and normalize article references
 export const detectArticles = (str, defaultCode) => {
   const matches = str.match(new RegExp(RE_ARTICLE, "gi"));
+  console.log("matches", matches);
   let startIndex = 0;
   return (
     (matches &&
@@ -49,19 +48,19 @@ export const detectArticles = (str, defaultCode) => {
           : str.substring(indexOfArticle, indexOfArticle + match.length);
 
         const valueString = detectedCode
-          ? `${article.value} du ${detectedCode.value}`
-          : `${article.value}`;
+          ? `Article ${article.value} du ${detectedCode.value}`
+          : `Article ${article.value}`;
 
         const code = detectedCode || defaultCode;
 
         const fullValueString = code
-          ? `${article.value} du ${code.value}`
-          : `${article.value}`;
+          ? `Article ${article.value} du ${code.value}`
+          : `Article ${article.value}`;
 
         startIndex = indexOfArticle;
 
         let url;
-        console.log("code", code);
+        // console.log("code", code);
         if (code) {
           try {
             const articles = require(`./data/articles/${code.id}.json`);

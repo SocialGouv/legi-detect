@@ -49,7 +49,7 @@ const htmlize = (text, results) =>
   results.reduce((cur, article) => {
     console.log("article.source", article.source);
     return cur.replace(
-      new RegExp(`[^>](${article.source})`, "g"),
+      new RegExp(`[^>]?(${article.source})`, "g"),
       article.url
         ? ` <a target="_blank" href="${article.url}" class="highlight" title="${
             article.fullValue
