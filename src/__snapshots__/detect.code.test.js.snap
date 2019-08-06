@@ -11,14 +11,7 @@ Object {
 
 exports[`code civille 1`] = `undefined`;
 
-exports[`code penal 1`] = `
-Object {
-  "etat": "VIGUEUR",
-  "id": "LEGITEXT000006071029",
-  "source": "code penal",
-  "value": "CODE PENAL",
-}
-`;
+exports[`code penal 1`] = `undefined`;
 
 exports[`code pénal 1`] = `
 Object {
@@ -41,7 +34,7 @@ Object {
 exports[`du code de la route 1`] = `
 Object {
   "etat": "VIGUEUR",
-  "id": "LEGITEXT000006074947",
+  "id": "LEGITEXT000006074228",
   "source": "code de la route",
   "value": "Code de la route",
 }
@@ -49,23 +42,9 @@ Object {
 
 exports[`du code de la rue 1`] = `undefined`;
 
-exports[`du code penal 1`] = `
-Object {
-  "etat": "VIGUEUR",
-  "id": "LEGITEXT000006071029",
-  "source": "code penal",
-  "value": "CODE PENAL",
-}
-`;
+exports[`du code penal 1`] = `undefined`;
 
-exports[`du code pennal 1`] = `
-Object {
-  "etat": "VIGUEUR",
-  "id": "LEGITEXT000006071029",
-  "source": "code pennal",
-  "value": "CODE PENAL",
-}
-`;
+exports[`du code pennal 1`] = `undefined`;
 
 exports[`du code pénal et du code civil et du code de la route 1`] = `
 Object {

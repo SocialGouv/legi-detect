@@ -1,8 +1,16 @@
 .App {
   font-family: sans-serif;
+  font-size: 0.8em;
 }
-
+textarea {
+  font-size: 1em !important;
+}
 .highlight {
   background: yellow;
   padding: 2px 0;
+}
+
+a::after {
+  margin-left: 5px;
+  content: "✅";
 }

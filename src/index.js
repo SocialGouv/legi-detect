@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import debounce from "lodash.debounce";
 
 import "./styles.css";
 
 import detectArticles from "./detect.articles";
 
-const SAMPLE_TEXT = `
-Il était une fois L'Ordonnance n° 2017-95233 du 22 septembre 2017 qui proclama :
+const SAMPLE_TEXT = `Il était une fois L'Ordonnance n° 2017-95233 du 22 septembre 2017 qui proclama :
 
 1° L'article L. 2232-5 du code du travail est complété par un deuxième alinéa ainsi rédigé :
 « Sauf disposition contraire, les termes “ convention de branche ” désignent la convention collective et les accords de branche, les accords professionnels et les accords interbranches. » ;
+
+article D234-4 du code de commerce
+
+article 1045 du Code général des impôts
+
+article L1131-1 du code de la défense
 
 2° L'article L. 2232-5-1 est ainsi modifié :
 a) Les premier et deuxième alinéas de l'article L. 2232-5-1 sont remplacés par les dispositions suivantes :
@@ -19,7 +23,7 @@ a) Les premier et deuxième alinéas de l'article L. 2232-5-1 sont remplacés pa
 b) Le 2° de l'article L. 2232-5-1 est supprimé ;
 c) Le 3° devient le 2° ;
 
-3° L'article L. 2232-11 du code pénal est complété par un deuxième alinéa ainsi rédigé :
+3° L'article R131-33 du code pénal est complété par un deuxième alinéa ainsi rédigé :
 « Sauf disposition contraire, les termes “ convention d'entreprise ” désignent toute convention ou accord conclu soit au niveau de l'entreprise, soit au niveau de l'établissement. » ;
 
 4° Les articles L. 2253-1 à L. 2253-3 sont remplacés par les dispositions suivantes :
@@ -43,11 +47,16 @@ function useDebounce(value, delay) {
 
 const htmlize = (text, results) =>
   results.reduce((cur, article) => {
+    console.log("article.source", article.source);
     return cur.replace(
-      article.source,
-      `<span class="highlight" title="${article.fullValue}">${
-        article.value
-      }</span>`
+      new RegExp(`[^>](${article.source})`, "g"),
+      article.url
+        ? ` <a target="_blank" href="${article.url}" class="highlight" title="${
+            article.fullValue
+          }">${article.value}</a>`
+        : ` <span class="highlight" title="${article.fullValue}">${
+            article.value
+          }</span>`
     );
   }, text.replace(/\n/gi, "<br>"));
 
@@ -60,9 +69,10 @@ function App() {
   useEffect(() => {
     if (debouncedSearchTerm) {
       const results = detectArticles(text, {
-        id: "abc",
+        id: "LEGITEXT000006072050",
         value: "Code du travail"
       });
+      console.log("results", results);
       setHtml(htmlize(text, results));
     }
   }, [debouncedSearchTerm]);

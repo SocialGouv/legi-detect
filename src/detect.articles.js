@@ -7,7 +7,7 @@ const RE_ARTICLE =
   "([LRD])\\s*" + //           prefix      LDR
   "[.-\\s]?" + //              separator    -
   "\\s*" + //                  spaces
-  "((\\d+(-\\d+){0,3}))" + //  nums        123 123-45 123-45-6 123-45-6-7
+  "((\\d{1,4}(-\\d+){0,3}))" + //  nums        123 123-45 123-45-6 123-45-6-7
   "\\b";
 
 const getWords = (str, count, startWordIndex = 0) =>
@@ -31,7 +31,7 @@ export const detectArticles = (str, defaultCode) => {
         const parts = match.match(new RegExp(RE_ARTICLE, "i"));
         const article = {
           source: match,
-          value: `${parts[1]}-${parts[2]}`
+          value: `${parts[1] || ""}${parts[2]}`
         };
 
         const codeSearchString = getSubPhraseFromIndex(
@@ -39,32 +39,49 @@ export const detectArticles = (str, defaultCode) => {
           indexOfArticle + match.length
         );
 
-        const code = detectCode(codeSearchString);
+        const detectedCode = detectCode(codeSearchString);
 
-        const sourceString = code
+        const sourceString = detectedCode
           ? str.substring(
               indexOfArticle,
-              indexOfArticle + `${match} du ${code.source}`.length
+              indexOfArticle + `${match} du ${detectedCode.source}`.length
             )
           : str.substring(indexOfArticle, indexOfArticle + match.length);
 
-        const valueString = code
+        const valueString = detectedCode
+          ? `${article.value} du ${detectedCode.value}`
+          : `${article.value}`;
+
+        const code = detectedCode || defaultCode;
+
+        const fullValueString = code
           ? `${article.value} du ${code.value}`
           : `${article.value}`;
 
-        const fullValueString =
-          code || defaultCode
-            ? `${article.value} du ${(code || defaultCode).value}`
-            : `${article.value}`;
-
         startIndex = indexOfArticle;
 
+        let url;
+        console.log("code", code);
+        if (code) {
+          try {
+            const articles = require(`./data/articles/${code.id}.json`);
+            const id = articles[article.value];
+            if (id) {
+              url = `https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=${id}&cidTexte=${
+                code.id
+              }`;
+            }
+          } catch (e) {
+            console.log("e", e);
+          }
+        }
         return {
           source: sourceString,
           fullValue: fullValueString,
           value: valueString,
           article,
-          code: code || defaultCode
+          code,
+          url
         };
       })) ||
     []
