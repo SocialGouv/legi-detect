@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
+import codes from "legi-codes-list";
+
 import "./styles.css";
 
 import detectArticles from "./detect.articles";
@@ -16,6 +18,7 @@ article 1045 du Code général des impôts
 
 article L1131-1 du code de la défense
 
+à l'article Article L311-13 du Code de l'entrée et du séjour des étrangers et du droit d'asile
 2° L'article L. 2232-5-1 est ainsi modifié :
 a) Les premier et deuxième alinéas de l'article L. 2232-5-1 sont remplacés par les dispositions suivantes :
 « La branche a pour missions :
@@ -90,6 +93,25 @@ function App() {
       />
       <br />
       <div dangerouslySetInnerHTML={{ __html: html }} />
+      <hr />
+      <h5>Les codes supportés</h5>
+      <ul>
+        {codes
+          .filter(c => c.etat === "VIGUEUR" && c.titrefull.length < 80)
+          .map(code => (
+            <li>
+              <a
+                target="_blank"
+                rel="noopener nofollower"
+                href={`https://www.legifrance.gouv.fr/affichCode.do?cidTexte=${
+                  code.id
+                }`}
+              >
+                {code.titrefull}
+              </a>
+            </li>
+          ))}
+      </ul>
     </div>
   );
 }

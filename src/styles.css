@@ -10,7 +10,7 @@ textarea {
   padding: 2px 0;
 }
 
-a::after {
+a.highlight::after {
   margin-left: 5px;
   content: "✅";
 }

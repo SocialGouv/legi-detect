@@ -8,10 +8,10 @@ const codes = legi.map(code => ({
   value: code.titrefull
 }));
 
-// the max code length is 18; we focus on 12 wich cover +95% of cases and improve performance/precision
+// the max code length is 18; we focus on 12 wich cover >=85% of cases and improve performance/precision
 export const maxCodeWordsCount = 12;
 
-// detect the most probable code for a given string with 95% score required
+// detect the most probable code for a given string with >=85% score required
 const detectSingleCode = source => {
   const matches = codes
     .filter(code => (code.etat = "VIGUEUR"))
@@ -22,7 +22,7 @@ const detectSingleCode = source => {
     }))
     .sort(sortByKey("score"))
     .filter(
-      result => result.score >= Math.max(80, 100 - result.code.value.length)
+      result => result.score >= Math.max(85, 100 - result.code.value.length)
     );
   return matches && matches[0];
 };
