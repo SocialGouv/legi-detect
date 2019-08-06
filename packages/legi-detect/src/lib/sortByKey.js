@@ -7,4 +7,4 @@ const sortByKey = key => (a, b) => {
   return 0;
 };
 
-export default sortByKey;
+module.exports = sortByKey;

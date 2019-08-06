@@ -1,4 +1,4 @@
-import { detectCode } from "./detect.code";
+const { detectCode } = require("./detect.code");
 
 const tests = `
 du code civil et tout

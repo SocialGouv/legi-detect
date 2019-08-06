@@ -1,4 +1,4 @@
-import detectCode, { maxCodeWordsCount } from "./detect.code";
+const { detectCode, maxCodeWordsCount } = require("./detect.code");
 
 // poor-man multiline regexps
 
@@ -103,7 +103,7 @@ const detectMultiples = (str, defaultCode) => {
           let url;
           if (code) {
             try {
-              const codeData = require(`./data/articles/${code.id}.json`);
+              const codeData = require(`../data/articles/${code.id}.json`);
               const id = codeData[articles[0]];
               if (id) {
                 url = `https://www.legifrance.gouv.fr/affichCode.do?idArticle=${id}&cidTexte=${
@@ -140,7 +140,7 @@ const detectMultiples = (str, defaultCode) => {
  *
  */
 
-export const detectSingle = (str, defaultCode) => {
+const detectSingle = (str, defaultCode) => {
   const matches = str.match(new RegExp(RE_ARTICLE, "gi"));
   let startIndex = 0;
   return (
@@ -184,7 +184,7 @@ export const detectSingle = (str, defaultCode) => {
         // console.log("code", code);
         if (code) {
           try {
-            const articles = require(`./data/articles/${code.id}.json`);
+            const articles = require(`../data/articles/${code.id}.json`);
             const id = articles[article.value];
             if (id) {
               url = `https://www.legifrance.gouv.fr/affichCodeArticle.do?idArticle=${id}&cidTexte=${
@@ -214,4 +214,8 @@ const detectArticles = (str, defaultCode) => {
     ...detectMultiples(str, defaultCode)
   ];
 };
-export default detectArticles;
+
+module.exports = {
+  detectSingle,
+  detectMultiples
+};

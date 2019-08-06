@@ -5,7 +5,7 @@ import codes from "legi-codes-list";
 
 import "./styles.css";
 
-import replace from "./replace";
+import { replace } from "@socialgouv/legi-detect";
 
 const SAMPLE_TEXT = `Il était une fois L'Ordonnance n° 2017-95233 du 22 septembre 2017 qui proclama :
 

@@ -1,4 +1,4 @@
-import detectArticles from "./detect.articles";
+const detect = require("./detect");
 
 const replaceRefs = (text, spacing, result) =>
   result.url
@@ -10,6 +10,7 @@ const replaceRefs = (text, spacing, result) =>
       }</span>${spacing}`;
 
 const htmlize = (text, results, replacer = replaceRefs) =>
+  console.log(results) ||
   results
     .reduce(
       (cur, result) =>
@@ -22,8 +23,8 @@ const htmlize = (text, results, replacer = replaceRefs) =>
     .replace(/\n/gi, "<br>");
 
 const replace = (text, defaultCode) => {
-  const results = detectArticles(text, defaultCode);
+  const results = detect(text, defaultCode);
   return htmlize(text, results);
 };
 
-export default replace;
+module.exports = replace;

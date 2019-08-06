@@ -1,0 +1,16 @@
+{
+  "command": {
+    "version": {
+      "createRelease": "github",
+      "conventionalCommits": true,
+      "message": "chore(release): version %v"
+    }
+  },
+  "packages": [
+    "optional/*",
+    "optional/e2e/*",
+    "packages/*"
+  ],
+  "npmClient": "yarn",
+  "version": "23.4.5"
+}

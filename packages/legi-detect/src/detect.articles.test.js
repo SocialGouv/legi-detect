@@ -1,4 +1,4 @@
-import detectArticles from "./detect.articles";
+const detect = require("./detect");
 
 const tests = [
   { input: `Article D212`, expected: ["Article D212"] },
@@ -50,7 +50,7 @@ tests.forEach(t => {
 
 tests.forEach(t => {
   it(`${t.input.replace(/\n/gm, " ")} => ${t.expected.join(", ")}`, () => {
-    const references = detectArticles(t.input);
+    const references = detect(t.input);
     if (!t.expected.length) {
       expect(references.length).toEqual(0);
     } else {
@@ -70,7 +70,7 @@ L'article L. 123-1 du code de la route est remplacé par L'article D. 2253-3 du 
 
 tests2.forEach(t => {
   it(`should use defaultCode for ${t}`, () => {
-    const references = detectArticles(t, {
+    const references = detect(t, {
       value: "code du test",
       id: "LEGITEXT000006070158"
     });
@@ -111,7 +111,7 @@ les fameux articles L311-13 et  L311-18 du Code de l'entrée et du séjour des �
 
 `;
 
-  const references = detectArticles(SAMPLE_TEXT, {
+  const references = detect(SAMPLE_TEXT, {
     value: "code du test",
     id: "LEGITEXT000006070158"
   });

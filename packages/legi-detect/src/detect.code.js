@@ -1,7 +1,7 @@
-import legi from "legi-codes-list";
-import fuzz from "fuzzball";
+const legi = require("legi-codes-list");
+const fuzz = require("fuzzball");
 
-import sortByKey from "./lib/sortByKey";
+const sortByKey = require("./lib/sortByKey");
 
 const codes = legi.map(code => ({
   id: code.id,
@@ -9,7 +9,7 @@ const codes = legi.map(code => ({
 }));
 
 // the max code length is 18; we focus on 12 wich cover >=85% of cases and improve performance/precision
-export const maxCodeWordsCount = 12;
+const maxCodeWordsCount = 12;
 
 // detect the most probable code for a given string with >=85% score required
 const detectSingleCode = source => {
@@ -29,7 +29,7 @@ const detectSingleCode = source => {
 
 // detect the most probable code for a given string (using ~maxCodeWordsCount words count)
 // maximize precision by trying different words length
-export const detectCode = str => {
+const detectCode = str => {
   const matches = Array.from({ length: maxCodeWordsCount }, (v, k) =>
     detectSingleCode(
       str
@@ -51,4 +51,4 @@ export const detectCode = str => {
   );
 };
 
-export default detectCode;
+module.exports = { detectCode, maxCodeWordsCount };
