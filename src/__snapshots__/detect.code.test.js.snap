@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`code civil 1`] = `
+Object {
+  "code": Object {
+    "id": "LEGITEXT000006070721",
+    "titre": "Code civil",
+  },
+  "score": 100,
+  "source": "code civil",
+}
+`;
+
+exports[`code civille 1`] = `undefined`;
+
+exports[`code penal 1`] = `
+Object {
+  "code": Object {
+    "id": "LEGITEXT000006071029",
+    "titre": "CODE PENAL",
+  },
+  "score": 100,
+  "source": "code penal",
+}
+`;
+
+exports[`code pénal 1`] = `
+Object {
+  "code": Object {
+    "id": "LEGITEXT000006070719",
+    "titre": "Code pénal",
+  },
+  "score": 100,
+  "source": "code pénal",
+}
+`;
+
+exports[`du code civil et tout 1`] = `
+Object {
+  "code": Object {
+    "id": "LEGITEXT000006070721",
+    "titre": "Code civil",
+  },
+  "score": 100,
+  "source": "code civil",
+}
+`;
+
+exports[`du code de la route 1`] = `
+Object {
+  "code": Object {
+    "id": "LEGITEXT000006074947",
+    "titre": "Code de la route",
+  },
+  "score": 100,
+  "source": "code de la route",
+}
+`;
+
+exports[`du code de la rue 1`] = `undefined`;
+
+exports[`du code penal 1`] = `
+Object {
+  "code": Object {
+    "id": "LEGITEXT000006071029",
+    "titre": "CODE PENAL",
+  },
+  "score": 100,
+  "source": "code penal",
+}
+`;
+
+exports[`du code pennal 1`] = `undefined`;
+
+exports[`du code pénal et du code civil et du code de la route 1`] = `
+Object {
+  "code": Object {
+    "id": "LEGITEXT000006070719",
+    "titre": "Code pénal",
+  },
+  "score": 100,
+  "source": "code pénal",
+}
+`;

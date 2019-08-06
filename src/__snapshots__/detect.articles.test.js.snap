@@ -1,0 +1,504 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article D.212 => D-212 1`] = `
+Array [
+  Object {
+    "source": "D.212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`Article D.212-5 => D-212-5 1`] = `
+Array [
+  Object {
+    "source": "D.212-5",
+    "value": "D-212-5",
+  },
+]
+`;
+
+exports[`Article D.212-5-6 => D-212-5-6 1`] = `
+Array [
+  Object {
+    "source": "D.212-5-6",
+    "value": "D-212-5-6",
+  },
+]
+`;
+
+exports[`Article D.212-5-6-7 => D-212-5-6-7 1`] = `
+Array [
+  Object {
+    "source": "D.212-5-6-7",
+    "value": "D-212-5-6-7",
+  },
+]
+`;
+
+exports[`Article D-212 => D-212 1`] = `
+Array [
+  Object {
+    "source": "D-212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`Article D-212-4 => D-212-4 1`] = `
+Array [
+  Object {
+    "source": "D-212-4",
+    "value": "D-212-4",
+  },
+]
+`;
+
+exports[`Article D212 => D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`Article D212 du code civil => D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`Article D212 du code pénal => D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`Article D212-3 => D-212-3 1`] = `
+Array [
+  Object {
+    "source": "D212-3",
+    "value": "D-212-3",
+  },
+]
+`;
+
+exports[`Article XD212 =>  1`] = `Array []`;
+
+exports[`random text
+Article D.212 random
+
+text Article D.212
+
+random text => D-212, D-212 1`] = `
+Array [
+  Object {
+    "source": "D.212",
+    "value": "D-212",
+  },
+  Object {
+    "source": "D.212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text
+Article D.212-5 random
+
+text Article D.212-5
+
+random text => D-212-5, D-212-5 1`] = `
+Array [
+  Object {
+    "source": "D.212-5",
+    "value": "D-212-5",
+  },
+  Object {
+    "source": "D.212-5",
+    "value": "D-212-5",
+  },
+]
+`;
+
+exports[`random text
+Article D.212-5-6 random
+
+text Article D.212-5-6
+
+random text => D-212-5-6, D-212-5-6 1`] = `
+Array [
+  Object {
+    "source": "D.212-5-6",
+    "value": "D-212-5-6",
+  },
+  Object {
+    "source": "D.212-5-6",
+    "value": "D-212-5-6",
+  },
+]
+`;
+
+exports[`random text
+Article D.212-5-6-7 random
+
+text Article D.212-5-6-7
+
+random text => D-212-5-6-7, D-212-5-6-7 1`] = `
+Array [
+  Object {
+    "source": "D.212-5-6-7",
+    "value": "D-212-5-6-7",
+  },
+  Object {
+    "source": "D.212-5-6-7",
+    "value": "D-212-5-6-7",
+  },
+]
+`;
+
+exports[`random text
+Article D-212 random
+
+text Article D-212
+
+random text => D-212, D-212 1`] = `
+Array [
+  Object {
+    "source": "D-212",
+    "value": "D-212",
+  },
+  Object {
+    "source": "D-212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text
+Article D-212-4 random
+
+text Article D-212-4
+
+random text => D-212-4, D-212-4 1`] = `
+Array [
+  Object {
+    "source": "D-212-4",
+    "value": "D-212-4",
+  },
+  Object {
+    "source": "D-212-4",
+    "value": "D-212-4",
+  },
+]
+`;
+
+exports[`random text
+Article D212 du code civil random
+
+text Article D212 du code civil
+
+random text => D-212, D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text
+Article D212 du code pénal random
+
+text Article D212 du code pénal
+
+random text => D-212, D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text
+Article D212 random
+
+text Article D212
+
+random text => D-212, D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text
+Article D212-3 random
+
+text Article D212-3
+
+random text => D-212-3, D-212-3 1`] = `
+Array [
+  Object {
+    "source": "D212-3",
+    "value": "D-212-3",
+  },
+  Object {
+    "source": "D212-3",
+    "value": "D-212-3",
+  },
+]
+`;
+
+exports[`random text
+Article XD212 random
+
+text Article XD212
+
+random text =>  1`] = `Array []`;
+
+exports[`random text Article D.212 random text => D-212 1`] = `
+Array [
+  Object {
+    "source": "D.212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text Article D.212 random text Article D.212 random text => D-212, D-212 1`] = `
+Array [
+  Object {
+    "source": "D.212",
+    "value": "D-212",
+  },
+  Object {
+    "source": "D.212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text Article D.212-5 random text => D-212-5 1`] = `
+Array [
+  Object {
+    "source": "D.212-5",
+    "value": "D-212-5",
+  },
+]
+`;
+
+exports[`random text Article D.212-5 random text Article D.212-5 random text => D-212-5, D-212-5 1`] = `
+Array [
+  Object {
+    "source": "D.212-5",
+    "value": "D-212-5",
+  },
+  Object {
+    "source": "D.212-5",
+    "value": "D-212-5",
+  },
+]
+`;
+
+exports[`random text Article D.212-5-6 random text => D-212-5-6 1`] = `
+Array [
+  Object {
+    "source": "D.212-5-6",
+    "value": "D-212-5-6",
+  },
+]
+`;
+
+exports[`random text Article D.212-5-6 random text Article D.212-5-6 random text => D-212-5-6, D-212-5-6 1`] = `
+Array [
+  Object {
+    "source": "D.212-5-6",
+    "value": "D-212-5-6",
+  },
+  Object {
+    "source": "D.212-5-6",
+    "value": "D-212-5-6",
+  },
+]
+`;
+
+exports[`random text Article D.212-5-6-7 random text => D-212-5-6-7 1`] = `
+Array [
+  Object {
+    "source": "D.212-5-6-7",
+    "value": "D-212-5-6-7",
+  },
+]
+`;
+
+exports[`random text Article D.212-5-6-7 random text Article D.212-5-6-7 random text => D-212-5-6-7, D-212-5-6-7 1`] = `
+Array [
+  Object {
+    "source": "D.212-5-6-7",
+    "value": "D-212-5-6-7",
+  },
+  Object {
+    "source": "D.212-5-6-7",
+    "value": "D-212-5-6-7",
+  },
+]
+`;
+
+exports[`random text Article D-212 random text => D-212 1`] = `
+Array [
+  Object {
+    "source": "D-212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text Article D-212 random text Article D-212 random text => D-212, D-212 1`] = `
+Array [
+  Object {
+    "source": "D-212",
+    "value": "D-212",
+  },
+  Object {
+    "source": "D-212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text Article D-212-4 random text => D-212-4 1`] = `
+Array [
+  Object {
+    "source": "D-212-4",
+    "value": "D-212-4",
+  },
+]
+`;
+
+exports[`random text Article D-212-4 random text Article D-212-4 random text => D-212-4, D-212-4 1`] = `
+Array [
+  Object {
+    "source": "D-212-4",
+    "value": "D-212-4",
+  },
+  Object {
+    "source": "D-212-4",
+    "value": "D-212-4",
+  },
+]
+`;
+
+exports[`random text Article D212 du code civil random text => D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text Article D212 du code civil random text Article D212 du code civil random text => D-212, D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text Article D212 du code pénal random text => D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text Article D212 du code pénal random text Article D212 du code pénal random text => D-212, D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text Article D212 random text => D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text Article D212 random text Article D212 random text => D-212, D-212 1`] = `
+Array [
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+  Object {
+    "source": "D212",
+    "value": "D-212",
+  },
+]
+`;
+
+exports[`random text Article D212-3 random text => D-212-3 1`] = `
+Array [
+  Object {
+    "source": "D212-3",
+    "value": "D-212-3",
+  },
+]
+`;
+
+exports[`random text Article D212-3 random text Article D212-3 random text => D-212-3, D-212-3 1`] = `
+Array [
+  Object {
+    "source": "D212-3",
+    "value": "D-212-3",
+  },
+  Object {
+    "source": "D212-3",
+    "value": "D-212-3",
+  },
+]
+`;
+
+exports[`random text Article XD212 random text =>  1`] = `Array []`;
+
+exports[`random text Article XD212 random text Article XD212 random text =>  1`] = `Array []`;
