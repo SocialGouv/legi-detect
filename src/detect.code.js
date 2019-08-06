@@ -21,7 +21,9 @@ const detectSingleCode = source => {
       score: fuzz.ratio(code.value, source)
     }))
     .sort(sortByKey("score"))
-    .filter(result => result.score >= 95);
+    .filter(
+      result => result.score >= Math.max(80, 100 - result.code.value.length)
+    );
   return matches && matches[0];
 };
 

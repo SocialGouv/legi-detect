@@ -10,7 +10,7 @@ const SAMPLE_TEXT = `Il était une fois L'Ordonnance n° 2017-95233 du 22 septem
 1° L'article L. 2232-5 du code du travail est complété par un deuxième alinéa ainsi rédigé :
 « Sauf disposition contraire, les termes “ convention de branche ” désignent la convention collective et les accords de branche, les accords professionnels et les accords interbranches. » ;
 
-article D234-4 du code de commerce
+article L123-11-3 du code du commerce
 
 article 1045 du Code général des impôts
 
@@ -28,7 +28,7 @@ c) Le 3° devient le 2° ;
 
 4° Les articles L. 2253-1 à L. 2253-3 sont remplacés par les dispositions suivantes :
 
-4° Les articles L. 123-1 du code de la route est remplacé par L. 2253-3 du code pénal et ainsi de suite
+4° Les articles L. 123-1 du code de la route est remplacé par R131-2 du code pénal et ainsi de suite
 
 `;
 
