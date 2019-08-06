@@ -53,19 +53,22 @@ function useDebounce(value, delay) {
 }
 
 const htmlize = (text, results) =>
-  results.reduce((cur, article) => {
-    console.log("article.source", article.source);
-    return cur.replace(
-      new RegExp(`[^>]?(${article.source})`, ""),
-      article.url
-        ? ` <a target="_blank" href="${article.url}" class="highlight" title="${
-            article.fullValue
-          }">${article.value}</a>`
-        : ` <span class="highlight" title="${article.fullValue}">${
-            article.value
-          }</span>`
-    );
-  }, text.replace(/\n/gi, "<br>"));
+  results
+    .reduce((cur, article) => {
+      return cur.replace(
+        new RegExp(`(${article.source})(\\s)`, ""),
+        article.url
+          ? ` <a target="_blank" href="${
+              article.url
+            }" class="highlight" title="${article.source}">${
+              article.value
+            }</a>$2`
+          : ` <span class="highlight" title="${article.fullValue}">${
+              article.source
+            }</span>$2`
+      );
+    }, text)
+    .replace(/\n/gi, "<br>");
 
 function App() {
   const [text, setText] = useState(SAMPLE_TEXT);
