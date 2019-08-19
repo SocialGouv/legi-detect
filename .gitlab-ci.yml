@@ -26,10 +26,13 @@ Deploy Demo:
     key: ${CI_COMMIT_REF_SLUG}
     paths:
       - node_modules/
+  variables:
+    - PUBLIC_URL=https://socialgouv.github.io/legi-detect
+    - REMOTE_URL=https://${GH_TOKEN}@github.com/SocialGouv/legi-detect.git
   before_script:
     - yarn --frozen-lockfile
     - apk add --update -y git
   script:
     - yarn build
-    - yarn gh-pages -d packages/demo/build -u "SocialGroovyBot <SocialGroovyBot@example.com>" -r https://${GH_TOKEN}@github.com/SocialGouv/legi-detect.git
+    - yarn gh-pages -d packages/demo/build -u "SocialGroovyBot <SocialGroovyBot@example.com>" -r $REMOTE_URL
 
