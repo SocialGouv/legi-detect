@@ -1,8 +1,8 @@
 # legi-detect
 
-Détecte des citations de textes issus de la base LEGI.
+Détecte des citations de textes issus de la base LEGI. Dans le browser, côté serveur (NodeJS), ou via API HTTP.
 
-[Demo : Playground](https://socialgouv.github.io/legi-detect)
+[Demo : Playground](https://legi-detect.incubateur.social.gouv.fr)
 
 ## Usage
 
@@ -52,3 +52,7 @@ ici ou
   >article L123-11-3 du code du commerce</a
 >
 ```
+
+### Todo
+
+- use [legi-data](https://github.com/SocialGouv/legi-data) as data-source
