@@ -88,7 +88,7 @@ const LivePreview = ({ code }) => {
         })
       );
     }
-  }, [debouncedSearchTerm, code]);
+  }, [debouncedSearchTerm, code]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="row">

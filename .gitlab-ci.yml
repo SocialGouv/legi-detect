@@ -28,7 +28,9 @@ Deploy Demo:
       - node_modules/
   before_script:
     - yarn --frozen-lockfile
+    - apk add --update -y git
   script:
     - yarn build
-    - gh-pages -d packages/demo/build -u "SocialGroovyBot <SocialGroovyBot@example.com>"
+    - remote=$(git config remote.origin.url)
+    - yarn gh-pages -d packages/demo/build -u "SocialGroovyBot <SocialGroovyBot@example.com>"
 

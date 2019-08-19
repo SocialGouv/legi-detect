@@ -2,7 +2,7 @@
 
 Détecte des citations de textes issus de la base LEGI. Dans le browser, côté serveur (NodeJS), ou via API HTTP.
 
-[Demo : Playground](https://legi-detect.incubateur.social.gouv.fr)
+[Demo : Playground](https://socialgouv.github.io/legi-detect/)
 
 ## Usage
 
