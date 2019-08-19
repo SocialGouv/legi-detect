@@ -31,5 +31,5 @@ Deploy Demo:
     - apk add --update -y git
   script:
     - yarn build
-    - yarn gh-pages -d packages/demo/build -u "SocialGroovyBot <SocialGroovyBot@example.com>"
+    - yarn gh-pages -d packages/demo/build -u "SocialGroovyBot <SocialGroovyBot@example.com>" -r https://${GH_TOKEN}@github.com/SocialGouv/legi-detect.git
 
