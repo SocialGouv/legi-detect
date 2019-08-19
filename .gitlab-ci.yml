@@ -31,6 +31,5 @@ Deploy Demo:
     - apk add --update -y git
   script:
     - yarn build
-    - remote=$(git config remote.origin.url)
     - yarn gh-pages -d packages/demo/build -u "SocialGroovyBot <SocialGroovyBot@example.com>"
 
