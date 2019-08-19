@@ -27,8 +27,8 @@ Deploy Demo:
     paths:
       - node_modules/
   variables:
-    - PUBLIC_URL=https://socialgouv.github.io/legi-detect
-    - REMOTE_URL=https://${GH_TOKEN}@github.com/SocialGouv/legi-detect.git
+    PUBLIC_URL: https://socialgouv.github.io/legi-detect
+    REMOTE_URL: https://${GH_TOKEN}@github.com/SocialGouv/legi-detect.git
   before_script:
     - yarn --frozen-lockfile
     - apk add --update -y git
