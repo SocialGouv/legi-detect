@@ -1,0 +1,34 @@
+---
+
+stages:
+- quality
+- deploy demo
+
+Quality:
+  stage: "quality"
+  image: node:12-alpine
+  before_script:
+    - yarn --frozen-lockfile
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  script:
+    - yarn lint
+    - yarn test
+
+Deploy Demo:
+  stage: "deploy demo"
+  image: node:12-alpine
+  before_script:
+    - yarn --frozen-lockfile
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  before_script:
+    - yarn --frozen-lockfile
+  script:
+    - yarn build
+    - gh-pages -d packages/demo/build -u "SocialGroovyBot <SocialGroovyBot@example.com>"
+
