@@ -6,7 +6,7 @@ const replaceRefs = (text, spacing, result) =>
         result.value
       }">${result.source}</a>${spacing}`
     : ` <span class="highlight" title="${result.fullValue.replace(/"/g, "")}">${
-        result.source
+        result.value
       }</span>${spacing}`;
 
 const htmlize = (text, results, replacer = replaceRefs) =>
