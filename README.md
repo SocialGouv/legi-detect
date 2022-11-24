@@ -1,4 +1,4 @@
-# legi-detect [![pipeline status](https://gitlab.factory.social.gouv.fr/SocialGouv/legi-detect/badges/master/pipeline.svg)](https://gitlab.factory.social.gouv.fr/SocialGouv/legi-detect/commits/master)
+# legi-detect
 
 Détecte des citations de textes issus de la base LEGI. Dans le browser, côté serveur (NodeJS), ou via API HTTP.
 
