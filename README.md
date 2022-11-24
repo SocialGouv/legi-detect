@@ -9,7 +9,7 @@ Détecte des citations de textes issus de la base LEGI. Dans le browser, côté 
 ### Javascript
 
 ```js
-import { replace } from "@socialgouv/legi-replace";
+import { replace } from "@socialgouv/legi-detect";
 
 const texte = `cf article L123-11-3 du code du commerce`;
 
